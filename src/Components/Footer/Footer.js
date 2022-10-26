@@ -176,18 +176,18 @@ const Footer = () => {
 								marginRight={6}
 							>
 								<Button variant={'link'} size={'sm'}>
-									<Link to='/serviciosBiogas'>Biogás</Link>
+									<Link to='/biogas'>Biogás</Link>
 								</Button>
 								<Button variant={'link'} size={'sm'}>
-									<Link to='/serviciosSolarTermico'>Solar Térmico</Link>
+									<Link to='/solarTermico'>Solar Térmico</Link>
 								</Button>
 								<Button variant={'link'} size={'sm'}>
-									<Link to='/serviciosSolarFotovoltaico'>
+									<Link to='/solarFotovoltaico'>
 										Solar Fotovoltáico
 									</Link>
 								</Button>
 								<Button variant={'link'} size={'sm'}>
-									<Link to='/serviciosResiduos'>Gestión de residuos</Link>
+									<Link to='/residuos'>Gestión de residuos</Link>
 								</Button>
 							</Stack>
 							<Stack
