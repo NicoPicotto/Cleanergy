@@ -6,7 +6,7 @@ import {
 	BsFillTrashFill,
 	BsFillSunFill,
 } from 'react-icons/bs';
-import { GiFootprint } from 'react-icons/gi';
+// import { GiFootprint } from 'react-icons/gi';
 
 const NumbersLayout = () => {
 	const { colorMode } = useColorMode();

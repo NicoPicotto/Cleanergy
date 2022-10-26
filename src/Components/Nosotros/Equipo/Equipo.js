@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Heading, Text, Divider, useMediaQuery } from '@chakra-ui/react';
+import { Flex, Heading, Divider, useMediaQuery } from '@chakra-ui/react';
 import CardsPersonales from './CardsPersonales/CardsPersonales';
 
 const Equipo = () => {

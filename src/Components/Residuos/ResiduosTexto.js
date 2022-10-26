@@ -4,13 +4,11 @@ import {
 	Divider,
 	Heading,
 	useMediaQuery,
-	useColorMode,
 } from '@chakra-ui/react';
 import VSensor from '../Animations/VSensor';
 
 const ResiduosTexto = () => {
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
-	const { colorMode } = useColorMode();
 
 	return (
 		<Flex justifyContent={'center'}>

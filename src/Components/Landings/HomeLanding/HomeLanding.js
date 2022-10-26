@@ -5,7 +5,6 @@ import {
 	ButtonGroup,
 	Button,
 	Text,
-	useColorMode,
 	useMediaQuery,
 } from '@chakra-ui/react';
 
@@ -13,7 +12,6 @@ import { Link } from 'react-scroll';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
 const HomeLanding = () => {
-	const { colorMode } = useColorMode();
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	return (
