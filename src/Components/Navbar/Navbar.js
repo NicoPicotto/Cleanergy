@@ -79,7 +79,7 @@ const Navbar = () => {
 										Nosotros
 									</Button>
 								</Link>
-								<Link to={'/serviciosBiogas'}>
+								<Link to={'/biogas'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -88,7 +88,7 @@ const Navbar = () => {
 										Servicios Biogás
 									</Button>
 								</Link>
-								<Link to={'/serviciosSolarTermico'}>
+								<Link to={'/solarTermico'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -97,7 +97,7 @@ const Navbar = () => {
 										Servicios Solar Termico
 									</Button>
 								</Link>
-								<Link to={'/serviciosSolarFotovoltaico'}>
+								<Link to={'/solarFotovoltaico'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -106,7 +106,7 @@ const Navbar = () => {
 										Servicios Solar Fotovoltáico
 									</Button>
 								</Link>
-								<Link to={'/serviciosResiduos'}>
+								<Link to={'/residuos'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -147,18 +147,18 @@ const Navbar = () => {
 								Servicios
 							</MenuButton>
 							<MenuList>
-								<Link to={'/serviciosBiogas'}>
+								<Link to={'/biogas'}>
 									<MenuItem color={'brand.primario'}>Biogás</MenuItem>
 								</Link>
-								<Link to={'/serviciosSolarTermico'}>
+								<Link to={'/solarTermico'}>
 									<MenuItem color={'brand.primario'}>Solar Térmico</MenuItem>
 								</Link>
-								<Link to={'/serviciosSolarFotovoltaico'}>
+								<Link to={'/solarFotovoltaico'}>
 									<MenuItem color={'brand.primario'}>
 										Solar Fotovoltáico
 									</MenuItem>
 								</Link>
-								<Link to={'/serviciosResiduos'}>
+								<Link to={'/residuos'}>
 									<MenuItem color={'brand.primario'}>
 										Gestión de residuos
 									</MenuItem>
