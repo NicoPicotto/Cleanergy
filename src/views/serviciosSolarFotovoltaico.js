@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import SectionLanding from '../Components/Landings/SectionsLanding/SectionsLanding';
+import ProyectosSolarFotovoltaico from "../Components/SolarFotovoltaico/ProyectosSolarFotovoltaico"
 
 const serviciosSolarFotovoltaico = () => {
-  return (
-    <div>serviciosSolarFotovoltaico</div>
-  )
-}
+	return (
+		<>
+			<SectionLanding
+				title='Solar Fotovoltáico'
+				bgImage={'/assets/serviceSolarFotovoltaicoPortada.JPG'}
+			/>
+      <ProyectosSolarFotovoltaico />
+		</>
+	);
+};
 
-export default serviciosSolarFotovoltaico
+export default serviciosSolarFotovoltaico;

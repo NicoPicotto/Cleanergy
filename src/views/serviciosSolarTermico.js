@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import SectionLanding from '../Components/Landings/SectionsLanding/SectionsLanding';
+import ProyectosSolarTermico from '../Components/SolarTermico/ProyectosSolarTermico';
 
 const serviciosSolarTermico = () => {
-  return (
-    <div>serviciosSolarTermico</div>
-  )
-}
+	return (
+		<>
+			<SectionLanding
+				title='Solar Térmico'
+				bgImage={'/assets/serviceSolarPortada.JPG'}
+			/>
+      <ProyectosSolarTermico />
+		</>
+	);
+};
 
-export default serviciosSolarTermico
+export default serviciosSolarTermico;
