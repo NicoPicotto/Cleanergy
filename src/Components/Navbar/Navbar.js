@@ -70,7 +70,7 @@ const Navbar = () => {
 								size={'lg'}
 								padding={5}
 							>
-								<Link href={'/nosotros'}>
+								<Link to={'/nosotros'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -79,7 +79,7 @@ const Navbar = () => {
 										Nosotros
 									</Button>
 								</Link>
-								<Link href={'/serviciosBiogas'}>
+								<Link to={'/serviciosBiogas'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -88,7 +88,7 @@ const Navbar = () => {
 										Servicios Biogás
 									</Button>
 								</Link>
-								<Link href={'/serviciosSolarTermico'}>
+								<Link to={'/serviciosSolarTermico'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -97,7 +97,7 @@ const Navbar = () => {
 										Servicios Solar Termico
 									</Button>
 								</Link>
-								<Link href={'/serviciosSolarFotovoltaico'}>
+								<Link to={'/serviciosSolarFotovoltaico'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -106,7 +106,7 @@ const Navbar = () => {
 										Servicios Solar Fotovoltáico
 									</Button>
 								</Link>
-								<Link href={'/serviciosResiduos'}>
+								<Link to={'/serviciosResiduos'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -115,7 +115,7 @@ const Navbar = () => {
 										Servicios Gestión de Residuos
 									</Button>
 								</Link>
-								<Link href={'/proyectos'}>
+								<Link to={'/proyectos'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
@@ -132,7 +132,7 @@ const Navbar = () => {
 			) : (
 				<Box>
 					<ButtonGroup spacing={4} flexDirection={'row'}>
-						<Link href={'/nosotros'}>
+						<Link to={'/nosotros'}>
 							<Button color={'brand.primario'} variant={'ghost'}>
 								Nosotros
 							</Button>
@@ -147,25 +147,25 @@ const Navbar = () => {
 								Servicios
 							</MenuButton>
 							<MenuList>
-								<Link href={'/serviciosBiogas'}>
+								<Link to={'/serviciosBiogas'}>
 									<MenuItem color={'brand.primario'}>Biogás</MenuItem>
 								</Link>
-								<Link href={'/serviciosSolarTermico'}>
+								<Link to={'/serviciosSolarTermico'}>
 									<MenuItem color={'brand.primario'}>Solar Térmico</MenuItem>
 								</Link>
-								<Link href={'/serviciosSolarFotovoltaico'}>
+								<Link to={'/serviciosSolarFotovoltaico'}>
 									<MenuItem color={'brand.primario'}>
 										Solar Fotovoltáico
 									</MenuItem>
 								</Link>
-								<Link href={'/serviciosResiduos'}>
+								<Link to={'/serviciosResiduos'}>
 									<MenuItem color={'brand.primario'}>
 										Gestión de residuos
 									</MenuItem>
 								</Link>
 							</MenuList>
 						</Menu>
-						<Link href={'/proyectos'}>
+						<Link to={'/proyectos'}>
 							<Button color={'brand.primario'} variant={'ghost'}>
 								Proyectos
 							</Button>

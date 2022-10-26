@@ -10,6 +10,7 @@ import Proyectos from './views/proyectos';
 import Residuos from './views/serviciosResiduos';
 import SolarFotovoltaico from './views/serviciosSolarFotovoltaico';
 import SolarTermico from './views/serviciosSolarTermico';
+import Footer from './Components/Footer/Footer';
 
 const App = () => {
 	return (
@@ -25,6 +26,7 @@ const App = () => {
 					<Route path='/solarfotovoltaico' element={<SolarFotovoltaico />} />
 					<Route path='/solartermico' element={<SolarTermico />} />
 				</Routes>
+				<Footer />
 			</Router>
 		</ChakraProvider>
 	);
