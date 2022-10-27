@@ -11,11 +11,13 @@ import Residuos from './views/serviciosResiduos';
 import SolarFotovoltaico from './views/serviciosSolarFotovoltaico';
 import SolarTermico from './views/serviciosSolarTermico';
 import Footer from './Components/Footer/Footer';
+import ScrolToTop from './Components/ScrollToTop/ScrollToTop';
 
 const App = () => {
 	return (
 		<ChakraProvider theme={theme}>
 			<Router>
+				<ScrolToTop />
 				<Navbar />
 				<Routes>
 					<Route path='/' element={<Home />} />
