@@ -7,7 +7,7 @@ const serviciosSolarTermico = () => {
 		<>
 			<SectionLanding
 				title='Solar Térmico'
-				bgImage={'/assets/serviceSolarPortada.JPG'}
+				bgImage={'/assets/serviceSolarPortada.webp'}
 			/>
       <ProyectosSolarTermico />
 		</>

@@ -8,7 +8,7 @@ const serviciosBiogas = () => {
     <>
 		<SectionsLanding
 			title='Biogás'
-			bgImage={'/assets/serviceBiogasPortada.JPG'}
+			bgImage={'/assets/serviceBiogasPortada.webp'}
 		/>
     <BiogasTexto />
     <BiogasProyectos />

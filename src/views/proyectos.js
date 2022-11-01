@@ -7,7 +7,7 @@ const proyectos = () => {
 		<>
 			<SectionsLanding
 				title='Proyectos'
-				bgImage={'/assets/serviceBiogasPortada.JPG'}
+				bgImage={'/assets/serviceBiogasPortada.webp'}
 			/>
 			<CardsProyectos />
 		</>

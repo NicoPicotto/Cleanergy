@@ -6,28 +6,28 @@ const CardLayout = () => {
 
 	const serv = [
 		{
-			imageSrc: '/assets/biogas.JPG',
+			imageSrc: '/assets/biogas.webp',
 			title: 'Biogás',
 			text: 'Ofrecemos soluciones y servicios end-to-end para productores agropecuarios, municipios, e inversores y desarrolladores privados',
 			goTo: '/biogas',
 			altImg: 'Imagen del servicio de Biogás',
 		},
 		{
-			imageSrc: '/assets/solart.jpg',
+			imageSrc: '/assets/solart.webp',
 			title: 'Solar Térmico',
 			text: 'Te brindamos diferentes alternativas para que aproveches la energía térmica para calentar fluidos, agua caliente sanitaria (ACS), piscinas, y calefacción de ambientes.',
 			goTo: '/solartermico',
 			altImg: 'Imagen del servicio de Solar Térmico',
 		},
 		{
-			imageSrc: '/assets/solarfv.JPG',
+			imageSrc: '/assets/solarfv.webp',
 			title: 'Solar Fotovoltáico',
 			text: 'Dimensionamiento e instalación de sistemas fotovoltaicos llave en mano, te asesoráramos para que puedas instalar tu sistema fotovoltaico de acuerdo a tus necesidades.',
 			goTo: '/solarfotovoltaico',
 			altImg: 'Imagen del servicio de Solar Fotovoltáico',
 		},
 		{
-			imageSrc: 'assets/residuos.jpeg',
+			imageSrc: 'assets/residuos.webp',
 			title: 'Gestión de residuos',
 			text: 'Ofrecemos un servicio integral de gestión de residuos orgánicos para grandes generadores de residuos y municipios.',
 			goTo: '/residuos',

@@ -60,7 +60,7 @@ const ProyectosSolarFotovoltaico = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/offgrid.jpg'
+								src='/assets/offgrid.webp'
 								alt='Sistema off grid'
 								width={'100%'}
 							/>
@@ -164,7 +164,7 @@ const ProyectosSolarFotovoltaico = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/ongrid.jpg'
+								src='/assets/ongrid.webp'
 								alt='Sistemas on grid'
 								width={'100%'}
 							/>
@@ -242,7 +242,7 @@ const ProyectosSolarFotovoltaico = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/bombeo.jpg'
+								src='/assets/bombeo.webp'
 								alt='Bombeo solar'
 								width={'100%'}
 							/>

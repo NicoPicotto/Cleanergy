@@ -59,7 +59,7 @@ const CardsProyectos = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/proyectoBiogas.jpg'
+								src='/assets/proyectoBiogas.webp'
 								alt='Proyecto 3C Biogás'
 								width={'100%'}
 							/>
@@ -141,7 +141,7 @@ const CardsProyectos = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/proyectoAlimentos.jpg'
+								src='/assets/proyectoAlimentos.webp'
 								alt='Alimentos Magros'
 								width={'100%'}
 							/>

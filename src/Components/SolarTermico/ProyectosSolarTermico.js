@@ -59,7 +59,7 @@ const ProyectosSolarTermico = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/piscina.jpg'
+								src='/assets/piscina.webp'
 								alt='Climatización de piscinas'
 								width={'100%'}
 							/>
@@ -222,7 +222,7 @@ const ProyectosSolarTermico = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/techos.jpg'
+								src='/assets/techos.webp'
 								alt='Agua Caliente Sanitaria'
 								width={'100%'}
 							/>
@@ -301,7 +301,7 @@ const ProyectosSolarTermico = () => {
 					>
 						<Box overflow={'hidden'}>
 							<Image
-								src='/assets/bomba.jpg'
+								src='/assets/bomba.webp'
 								alt='Climatización de ambientes'
 								width={'100%'}
 							/>

@@ -17,7 +17,7 @@ const HomeLanding = () => {
 	return (
 		<Flex
 			alignItems={'center'}
-			bgImage='/assets/landing.jpg'
+			bgImage='/assets/landing.webp'
 			height={isMobile ? '40vh' : '70vh'}
 			bgRepeat={'no-repeat'}
 			backgroundAttachment={isMobile ? null : 'fixed'}

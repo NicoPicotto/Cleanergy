@@ -5,7 +5,7 @@ import ResiduosTexto from '../Components/Residuos/ResiduosTexto'
 const serviciosResiduos = () => {
   return (
     <>
-      <SectionsLanding title="Gestión de residuos" bgImage={"/assets/serviceResiduos.JPG"}/>
+      <SectionsLanding title="Gestión de residuos" bgImage={"/assets/serviceResiduos.webp"}/>
       <ResiduosTexto />
     </>
   )

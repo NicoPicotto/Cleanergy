@@ -12,6 +12,7 @@ import SolarFotovoltaico from './views/serviciosSolarFotovoltaico';
 import SolarTermico from './views/serviciosSolarTermico';
 import Footer from './Components/Footer/Footer';
 import ScrolToTop from './Components/ScrollToTop/ScrollToTop';
+import ErrorPage from './views/404';
 
 const App = () => {
 	return (
@@ -27,6 +28,7 @@ const App = () => {
 					<Route path='/residuos' element={<Residuos />} />
 					<Route path='/solarfotovoltaico' element={<SolarFotovoltaico />} />
 					<Route path='/solartermico' element={<SolarTermico />} />
+					<Route path="*" element={<ErrorPage />}/>
 				</Routes>
 				<Footer />
 			</Router>

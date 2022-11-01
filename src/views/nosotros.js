@@ -6,7 +6,7 @@ import NosotrosTexto from '../Components/Nosotros/NosotrosTexto/NosotrosTexto';
 const nosotros = () => {
 	return (
 		<>
-			<SectionsLanding title='Nosotros' bgImage={'/assets/about.jpg'} />
+			<SectionsLanding title='Nosotros' bgImage={'/assets/about.webp'} />
 			<NosotrosTexto />
 			<Equipo />
 		</>

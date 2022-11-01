@@ -16,14 +16,14 @@ const ProjectsLayout = () => {
 			scrollBehavior={'smooth'}
 		>
 			<ProjectsCard
-				imageSrc={'/assets/home3c.jpg'}
+				imageSrc={'/assets/home3c.webp'}
 				title='Proyecto 3C Biogás'
 				text='Planta para autoconsumo de energía - 1,2 Mw.'
 				goTo='/proyectos'
 				altImg='Imagen de proyecto 3C Biogás'
 			/>
 			<ProjectsCard
-				imageSrc={'/assets/homeam.jpg'}
+				imageSrc={'/assets/homeam.webp'}
 				title='Proyecto Alimentos Magros'
 				text='Planta para autoconsumo de energía - 400 Kw.'
 				goTo='/proyectos'

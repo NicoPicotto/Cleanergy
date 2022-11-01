@@ -7,7 +7,7 @@ const Equipo = () => {
 
 	const teamMembers = [
 		{
-			imageSrc: '/assets/teamJP.jpg',
+			imageSrc: '/assets/teamJP.webp',
 			title: 'Juan Pablo Macagno',
 			subtitle:
 				'Licenciado en Biotecnología (UNR), PhD en Biotecnología (Universidad de Glasgow, Reino Unido)',
@@ -15,14 +15,14 @@ const Equipo = () => {
 			altImg: 'Foto de Juan Pablo Macagno',
 		},
 		{
-			imageSrc: '/assets/teamJuli.jpg',
+			imageSrc: '/assets/teamJuli.webp',
 			title: 'Julieta Oviedo',
 			subtitle: 'Licenciada en Ambiente y Energías Renovables (UNVM).',
 			text: 'Experiencia en diseño y desarrollo de proyectos solares fotovoltaicos de pequeña y mediana escala y en gestión de residuos orgánicos agroindustriales y operación de plantas de biogás.',
 			altImg: 'Foto de Julieta Oviedo',
 		},
 		{
-			imageSrc: '/assets/teamFlavio.jpg',
+			imageSrc: '/assets/teamFlavio.webp',
 			title: 'Flavio Lepore',
 			subtitle:
 				'Ingeniero Mecánico (UNRC) y diplomado en gestión de activos y mantenimiento (UTN).',
@@ -30,7 +30,7 @@ const Equipo = () => {
 			altImg: 'Foto de Flavio Lepore',
 		},
 		{
-			imageSrc: '/assets/teamBullo.jpg',
+			imageSrc: '/assets/teamBullo.webp',
 			title: 'Nicolás Bullo',
 			subtitle:
 				'Estudiante avanzado de Ing. Agronómica en Facultad De Agronomía y Veterinaria (UNRC).',
@@ -38,7 +38,7 @@ const Equipo = () => {
 			altImg: 'Foto de Nicolas Bullo',
 		},
 		{
-			imageSrc: '/assets/teamMarle.jpg',
+			imageSrc: '/assets/teamMarle.webp',
 			title: 'Marlene Martinez',
 			subtitle:
 				'Estudiante de la carrera Contador Publico Nacional en Universidad Nacional de Cuyo (Mendoza).',
