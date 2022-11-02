@@ -1,42 +1,22 @@
 import React from 'react';
-import { Flex, useColorMode } from '@chakra-ui/react';
-import CardNumber from './CardNumber/CardNumber';
+import {
+	Flex,
+	useColorMode,
+	Box,
+	Heading,
+	Stack,
+	Text,
+} from '@chakra-ui/react';
 import {
 	BsFillLightningChargeFill,
 	BsFillTrashFill,
 	BsFillSunFill,
 } from 'react-icons/bs';
-// import { GiFootprint } from 'react-icons/gi';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const NumbersLayout = () => {
 	const { colorMode } = useColorMode();
-
-	const stats = [
-		{
-			icon: <BsFillTrashFill size={50} />,
-			number: 63035,
-			unidad: 'Tn',
-			text: 'Residuos Orgánicos Revalorizados',
-		},
-		{
-			icon: <BsFillLightningChargeFill size={50} />,
-			number: 15617,
-			unidad: 'MWh',
-			text: 'Energía Eléctrica Renovable Producida',
-		},
-		{
-			icon: <BsFillSunFill size={50} />,
-			number: 3900,
-			unidad: 'Lts',
-			text: 'ACS Solar Instalados',
-		},
-		// {
-		// 	icon: <GiFootprint size={50} />,
-		// 	number: 1550,
-		// 	unidad: 'Tn',
-		// 	text: 'Toneladas de CO₂ Evitadas',
-		// },
-	];
 
 	return (
 		<Flex
@@ -46,15 +26,72 @@ const NumbersLayout = () => {
 			flexWrap={'wrap'}
 			bgColor={colorMode === 'dark' ? 'gray.600' : 'brand.primario'}
 		>
-			{stats.map((stat, key) => (
-				<CardNumber
-					icon={stat.icon}
-					number={stat.number}
-					unidad={stat.unidad}
-					text={stat.text}
-					key={key}
-				/>
-			))}
+			<Box padding={6}>
+				<Stack alignItems={'center'} color={'white'}>
+					<Heading>
+						<BsFillTrashFill size={50} />
+					</Heading>
+					<Flex>
+						<Heading>
+							<CountUp end={63035}>
+								{({ countUpRef, start }) => (
+									<VisibilitySensor onChange={start}>
+										<span ref={countUpRef} />
+									</VisibilitySensor>
+								)}
+							</CountUp>
+						</Heading>
+						<Text>Tn</Text>
+					</Flex>
+					<Text textAlign={'center'} as={'b'}>
+						Residuos Orgánicos Revalorizados
+					</Text>
+				</Stack>
+			</Box>
+			<Box padding={6}>
+				<Stack alignItems={'center'} color={'white'}>
+					<Heading>
+						<BsFillLightningChargeFill size={50} />
+					</Heading>
+					<Flex>
+						<Heading>
+							<CountUp end={15617}>
+								{({ countUpRef, start }) => (
+									<VisibilitySensor onChange={start}>
+										<span ref={countUpRef} />
+									</VisibilitySensor>
+								)}
+							</CountUp>
+						</Heading>
+						<Text>MWh</Text>
+					</Flex>
+					<Text textAlign={'center'} as={'b'}>
+						Energía Eléctrica Renovable Producida
+					</Text>
+				</Stack>
+			</Box>
+			<Box padding={6}>
+				<Stack alignItems={'center'} color={'white'}>
+					<Heading>
+						<BsFillSunFill size={50} />
+					</Heading>
+					<Flex>
+						<Heading>
+							<CountUp end={3900}>
+								{({ countUpRef, start }) => (
+									<VisibilitySensor onChange={start}>
+										<span ref={countUpRef} />
+									</VisibilitySensor>
+								)}
+							</CountUp>
+						</Heading>
+						<Text>Lts</Text>
+					</Flex>
+					<Text textAlign={'center'} as={'b'}>
+						ACS Solar Instalados
+					</Text>
+				</Stack>
+			</Box>
 		</Flex>
 	);
 };

@@ -1,39 +1,20 @@
-import { Flex, useMediaQuery } from '@chakra-ui/react';
-import ServiceCard from './ServiceCard/ServiceCard';
+import {
+	Flex,
+	Box,
+	Heading,
+	Text,
+	Divider,
+	Button,
+	Image,
+	useColorMode,
+	useMediaQuery,
+} from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
 
 const CardLayout = () => {
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
-
-	const serv = [
-		{
-			imageSrc: '/assets/biogas.webp',
-			title: 'Biogás',
-			text: 'Ofrecemos soluciones y servicios end-to-end para productores agropecuarios, municipios, e inversores y desarrolladores privados',
-			goTo: '/biogas',
-			altImg: 'Imagen del servicio de Biogás',
-		},
-		{
-			imageSrc: '/assets/solart.webp',
-			title: 'Solar Térmico',
-			text: 'Te brindamos diferentes alternativas para que aproveches la energía térmica para calentar fluidos, agua caliente sanitaria (ACS), piscinas, y calefacción de ambientes.',
-			goTo: '/solartermico',
-			altImg: 'Imagen del servicio de Solar Térmico',
-		},
-		{
-			imageSrc: '/assets/solarfv.webp',
-			title: 'Solar Fotovoltáico',
-			text: 'Dimensionamiento e instalación de sistemas fotovoltaicos llave en mano, te asesoráramos para que puedas instalar tu sistema fotovoltaico de acuerdo a tus necesidades.',
-			goTo: '/solarfotovoltaico',
-			altImg: 'Imagen del servicio de Solar Fotovoltáico',
-		},
-		{
-			imageSrc: 'assets/residuos.webp',
-			title: 'Gestión de residuos',
-			text: 'Ofrecemos un servicio integral de gestión de residuos orgánicos para grandes generadores de residuos y municipios.',
-			goTo: '/residuos',
-			altImg: 'Imagen del servicio de Gestión de Residuos',
-		},
-	];
+	const { colorMode } = useColorMode();
 
 	return (
 		<Flex
@@ -45,16 +26,217 @@ const CardLayout = () => {
 			id='services'
 			scrollBehavior={'smooth'}
 		>
-			{serv.map((ser, key) => (
-				<ServiceCard 
-				imageSrc={ser.imageSrc}
-				title={ser.title}
-				text={ser.text}
-				goTo={ser.goTo}
-				altImg={ser.altImg}
-				key={key}
-				/>
-			))}
+			<Box
+				width={isMobile ? '100%' : '22%'}
+				borderRadius={20}
+				backdropFilter={'auto'}
+				bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+				boxShadow='md'
+				borderColor={colorMode === 'dark' && 'brand.secundario'}
+				borderWidth={colorMode === 'dark' && 1}
+				overflow={'hidden'}
+				marginTop={5}
+				marginBottom={5}
+				transition={'0.3s'}
+				_hover={{ boxShadow: 'xl' }}
+			>
+				<Box overflow={'hidden'}>
+					<Image
+						src='/assets/biogas.webp'
+						alt='Imagen del servicio de Biogás'
+						width={'100%'}
+					/>
+				</Box>
+				<Flex
+					padding={5}
+					flexDir={'column'}
+					minHeight={isMobile ? 'fit-content' : '17em'}
+					justifyContent={'space-between'}
+				>
+					<Flex flexDir={'column'} marginBottom={2}>
+						<Heading
+							color={'brand.secundario'}
+							fontSize={'1.5em'}
+							marginBottom={1}
+						>
+							Biogás
+						</Heading>
+						<Divider color={'brand.primario'} marginBottom={1} />
+						<Text color={'brand.terciario'} fontSize='md'>
+							Ofrecemos soluciones y servicios end-to-end para productores
+							agropecuarios, municipios, e inversores y desarrolladores
+							privados.
+						</Text>
+					</Flex>
+					<Link to='/biogas'>
+						<Button
+							width={'fit-content'}
+							colorScheme={'green'}
+							rightIcon={<ChevronRightIcon />}
+						>
+							Ver más
+						</Button>
+					</Link>
+				</Flex>
+			</Box>
+			<Box
+				width={isMobile ? '100%' : '22%'}
+				borderRadius={20}
+				backdropFilter={'auto'}
+				bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+				boxShadow='md'
+				borderColor={colorMode === 'dark' && 'brand.secundario'}
+				borderWidth={colorMode === 'dark' && 1}
+				overflow={'hidden'}
+				marginTop={5}
+				marginBottom={5}
+				transition={'0.3s'}
+				_hover={{ boxShadow: 'xl' }}
+			>
+				<Box overflow={'hidden'}>
+					<Image
+						src='/assets/solart.webp'
+						alt='Imagen del servicio de Solar Térmico'
+						width={'100%'}
+					/>
+				</Box>
+				<Flex
+					padding={5}
+					flexDir={'column'}
+					minHeight={isMobile ? 'fit-content' : '17em'}
+					justifyContent={'space-between'}
+				>
+					<Flex flexDir={'column'} marginBottom={2}>
+						<Heading
+							color={'brand.secundario'}
+							fontSize={'1.5em'}
+							marginBottom={1}
+						>
+							Solar Térmico
+						</Heading>
+						<Divider color={'brand.primario'} marginBottom={1} />
+						<Text color={'brand.terciario'} fontSize='md'>
+							Te brindamos diferentes alternativas para que aproveches la
+							energía térmica para calentar fluidos, agua caliente sanitaria
+							(ACS), piscinas, y calefacción de ambientes.
+						</Text>
+					</Flex>
+					<Link to='/solartermico'>
+						<Button
+							width={'fit-content'}
+							colorScheme={'green'}
+							rightIcon={<ChevronRightIcon />}
+						>
+							Ver más
+						</Button>
+					</Link>
+				</Flex>
+			</Box>
+			<Box
+				width={isMobile ? '100%' : '22%'}
+				borderRadius={20}
+				backdropFilter={'auto'}
+				bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+				boxShadow='md'
+				borderColor={colorMode === 'dark' && 'brand.secundario'}
+				borderWidth={colorMode === 'dark' && 1}
+				overflow={'hidden'}
+				marginTop={5}
+				marginBottom={5}
+				transition={'0.3s'}
+				_hover={{ boxShadow: 'xl' }}
+			>
+				<Box overflow={'hidden'}>
+					<Image
+						src='/assets/solarfv.webp'
+						alt='Imagen del servicio de Solar Fotovoltáico'
+						width={'100%'}
+					/>
+				</Box>
+				<Flex
+					padding={5}
+					flexDir={'column'}
+					minHeight={isMobile ? 'fit-content' : '17em'}
+					justifyContent={'space-between'}
+				>
+					<Flex flexDir={'column'} marginBottom={2}>
+						<Heading
+							color={'brand.secundario'}
+							fontSize={'1.5em'}
+							marginBottom={1}
+						>
+							Solar Fotovoltáico
+						</Heading>
+						<Divider color={'brand.primario'} marginBottom={1} />
+						<Text color={'brand.terciario'} fontSize='md'>
+							Dimensionamiento e instalación de sistemas fotovoltaicos llave en
+							mano, te asesoráramos para que puedas instalar tu sistema
+							fotovoltaico de acuerdo a tus necesidades.
+						</Text>
+					</Flex>
+					<Link to='/solarfotovoltaico'>
+						<Button
+							width={'fit-content'}
+							colorScheme={'green'}
+							rightIcon={<ChevronRightIcon />}
+						>
+							Ver más
+						</Button>
+					</Link>
+				</Flex>
+			</Box>
+			<Box
+				width={isMobile ? '100%' : '22%'}
+				borderRadius={20}
+				backdropFilter={'auto'}
+				bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+				boxShadow='md'
+				borderColor={colorMode === 'dark' && 'brand.secundario'}
+				borderWidth={colorMode === 'dark' && 1}
+				overflow={'hidden'}
+				marginTop={5}
+				marginBottom={5}
+				transition={'0.3s'}
+				_hover={{ boxShadow: 'xl' }}
+			>
+				<Box overflow={'hidden'}>
+					<Image
+						src='assets/residuos.webp'
+						alt='Imagen del servicio de Gestión de Residuos'
+						width={'100%'}
+					/>
+				</Box>
+				<Flex
+					padding={5}
+					flexDir={'column'}
+					minHeight={isMobile ? 'fit-content' : '17em'}
+					justifyContent={'space-between'}
+				>
+					<Flex flexDir={'column'} marginBottom={2}>
+						<Heading
+							color={'brand.secundario'}
+							fontSize={'1.5em'}
+							marginBottom={1}
+						>
+							Gestión de Residuos
+						</Heading>
+						<Divider color={'brand.primario'} marginBottom={1} />
+						<Text color={'brand.terciario'} fontSize='md'>
+							Ofrecemos un servicio integral de gestión de residuos orgánicos
+							para grandes generadores de residuos y municipios.
+						</Text>
+					</Flex>
+					<Link to='/residuos'>
+						<Button
+							width={'fit-content'}
+							colorScheme={'green'}
+							rightIcon={<ChevronRightIcon />}
+						>
+							Ver más
+						</Button>
+					</Link>
+				</Flex>
+			</Box>
 		</Flex>
 	);
 };

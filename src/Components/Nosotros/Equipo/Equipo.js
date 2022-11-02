@@ -1,51 +1,23 @@
 import React from 'react';
-import { Flex, Heading, Divider, useMediaQuery } from '@chakra-ui/react';
-import CardsPersonales from './CardsPersonales/CardsPersonales';
+import {
+	Flex,
+	Divider,
+	useMediaQuery,
+	Box,
+	Accordion,
+	AccordionButton,
+	AccordionItem,
+	AccordionIcon,
+	AccordionPanel,
+	Heading,
+	useColorMode,
+	Text,
+	Image,
+} from '@chakra-ui/react';
 
 const Equipo = () => {
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
-
-	const teamMembers = [
-		{
-			imageSrc: '/assets/teamJP.webp',
-			title: 'Juan Pablo Macagno',
-			subtitle:
-				'Licenciado en Biotecnología (UNR), PhD en Biotecnología (Universidad de Glasgow, Reino Unido)',
-			text: 'Vasta experiencia en Medio Ambiente, investigación y desarrollo de procesos biotecnológicos y gestión de residuos sólidos urbanos (GIRSU).',
-			altImg: 'Foto de Juan Pablo Macagno',
-		},
-		{
-			imageSrc: '/assets/teamJuli.webp',
-			title: 'Julieta Oviedo',
-			subtitle: 'Licenciada en Ambiente y Energías Renovables (UNVM).',
-			text: 'Experiencia en diseño y desarrollo de proyectos solares fotovoltaicos de pequeña y mediana escala y en gestión de residuos orgánicos agroindustriales y operación de plantas de biogás.',
-			altImg: 'Foto de Julieta Oviedo',
-		},
-		{
-			imageSrc: '/assets/teamFlavio.webp',
-			title: 'Flavio Lepore',
-			subtitle:
-				'Ingeniero Mecánico (UNRC) y diplomado en gestión de activos y mantenimiento (UTN).',
-			text: 'Experiencia en diseño y desarrollo de diferentes proyectos de ingeniería en industrias como la automotriz, medicina y metalmecánica. Experiencia en desarrollo de proyectos, gestión de mantenimiento y operación de plantas de biogás.',
-			altImg: 'Foto de Flavio Lepore',
-		},
-		{
-			imageSrc: '/assets/teamBullo.webp',
-			title: 'Nicolás Bullo',
-			subtitle:
-				'Estudiante avanzado de Ing. Agronómica en Facultad De Agronomía y Veterinaria (UNRC).',
-			text: 'Se unió a Cleanergy para realizar su trabajo final de grado y desde entonces se encarga de realizar el asesoramiento técnico agronómico para la revalorización del Digestato.',
-			altImg: 'Foto de Nicolas Bullo',
-		},
-		{
-			imageSrc: '/assets/teamMarle.webp',
-			title: 'Marlene Martinez',
-			subtitle:
-				'Estudiante de la carrera Contador Publico Nacional en Universidad Nacional de Cuyo (Mendoza).',
-			text: 'Dentro de Cleanergy Renovables S.A. realiza tareas administrativas.',
-			altImg: 'Foto de Marlene Martinez',
-		},
-	];
+	const { colorMode } = useColorMode();
 
 	return (
 		<Flex
@@ -75,16 +47,312 @@ const Equipo = () => {
 				flexWrap={'wrap'}
 				w={isMobile ? '90vw' : '70vw'}
 			>
-				{teamMembers.map((team, key) => (
-					<CardsPersonales
-						imageSrc={team.imageSrc}
-						title={team.title}
-						text={team.text}
-						subtitle={team.subtitle}
-						altImg={team.altImg}
-						key={key}
-					/>
-				))}
+				<Box
+					width={isMobile ? '100%' : '45%'}
+					borderRadius={20}
+					backdropFilter={'auto'}
+					bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+					boxShadow='md'
+					borderColor={colorMode === 'dark' && 'brand.primario'}
+					borderWidth={colorMode === 'dark' && 1}
+					overflow={'hidden'}
+					marginTop={5}
+					marginBottom={5}
+					transition={'0.3s'}
+					_hover={{ boxShadow: 'xl' }}
+				>
+					<Box overflow={'hidden'}>
+						<Image
+							src='/assets/teamJP.webp'
+							alt='Imagen Juan Pablo Macagno'
+							width={'100%'}
+						/>
+					</Box>
+					<Flex padding={2} flexDir={'column'} justifyContent={'space-between'}>
+						<Accordion allowToggle padding={1} borderColor={'transparent'}>
+							<AccordionItem>
+								<AccordionButton>
+									<Flex
+										alignItems={'center'}
+										justifyContent={'space-between'}
+										width={'100%'}
+									>
+										<Heading color={'brand.primario'} fontSize={'xl'}>
+											Juan Pablo Macagno
+										</Heading>
+										<AccordionIcon color={'brand.terciario'} />
+									</Flex>
+								</AccordionButton>
+								<AccordionPanel
+									bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+									pb={4}
+									fontFamily={'fonts.open'}
+								>
+									<Flex flexDir={'column'}>
+										<Heading
+											fontSize={'lg'}
+											marginBottom={2}
+											fontFamily={'fonts.open'}
+										>
+											Licenciado en Biotecnología (UNR), PhD en Biotecnología
+											(Universidad de Glasgow, Reino Unido)
+										</Heading>
+										<Text fontSize={'sm'}>
+											Vasta experiencia en Medio Ambiente, investigación y
+											desarrollo de procesos biotecnológicos y gestión de
+											residuos sólidos urbanos (GIRSU).
+										</Text>
+									</Flex>
+								</AccordionPanel>
+							</AccordionItem>
+						</Accordion>
+					</Flex>
+				</Box>
+				<Box
+					width={isMobile ? '100%' : '45%'}
+					borderRadius={20}
+					backdropFilter={'auto'}
+					bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+					boxShadow='md'
+					borderColor={colorMode === 'dark' && 'brand.primario'}
+					borderWidth={colorMode === 'dark' && 1}
+					overflow={'hidden'}
+					marginTop={5}
+					marginBottom={5}
+					transition={'0.3s'}
+					_hover={{ boxShadow: 'xl' }}
+				>
+					<Box overflow={'hidden'}>
+						<Image
+							src='/assets/teamJuli.webp'
+							alt='Imagen Julieta Oviedo'
+							width={'100%'}
+						/>
+					</Box>
+					<Flex padding={2} flexDir={'column'} justifyContent={'space-between'}>
+						<Accordion allowToggle padding={1} borderColor={'transparent'}>
+							<AccordionItem>
+								<AccordionButton>
+									<Flex
+										alignItems={'center'}
+										justifyContent={'space-between'}
+										width={'100%'}
+									>
+										<Heading color={'brand.primario'} fontSize={'xl'}>
+											Julieta Oviedo
+										</Heading>
+										<AccordionIcon color={'brand.terciario'} />
+									</Flex>
+								</AccordionButton>
+								<AccordionPanel
+									bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+									pb={4}
+									fontFamily={'fonts.open'}
+								>
+									<Flex flexDir={'column'}>
+										<Heading
+											fontSize={'lg'}
+											marginBottom={2}
+											fontFamily={'fonts.open'}
+										>
+											Licenciada en Ambiente y Energías Renovables (UNVM)
+										</Heading>
+										<Text fontSize={'sm'}>
+											Experiencia en diseño y desarrollo de proyectos solares
+											fotovoltaicos de pequeña y mediana escala y en gestión de
+											residuos orgánicos agroindustriales y operación de plantas
+											de biogás.
+										</Text>
+									</Flex>
+								</AccordionPanel>
+							</AccordionItem>
+						</Accordion>
+					</Flex>
+				</Box>
+				<Box
+					width={isMobile ? '100%' : '45%'}
+					borderRadius={20}
+					backdropFilter={'auto'}
+					bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+					boxShadow='md'
+					borderColor={colorMode === 'dark' && 'brand.primario'}
+					borderWidth={colorMode === 'dark' && 1}
+					overflow={'hidden'}
+					marginTop={5}
+					marginBottom={5}
+					transition={'0.3s'}
+					_hover={{ boxShadow: 'xl' }}
+				>
+					<Box overflow={'hidden'}>
+						<Image
+							src='/assets/teamFlavio.webp'
+							alt='Imagen Flavio Lepore'
+							width={'100%'}
+						/>
+					</Box>
+					<Flex padding={2} flexDir={'column'} justifyContent={'space-between'}>
+						<Accordion allowToggle padding={1} borderColor={'transparent'}>
+							<AccordionItem>
+								<AccordionButton>
+									<Flex
+										alignItems={'center'}
+										justifyContent={'space-between'}
+										width={'100%'}
+									>
+										<Heading color={'brand.primario'} fontSize={'xl'}>
+											Flavio Lepore
+										</Heading>
+										<AccordionIcon color={'brand.terciario'} />
+									</Flex>
+								</AccordionButton>
+								<AccordionPanel
+									bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+									pb={4}
+									fontFamily={'fonts.open'}
+								>
+									<Flex flexDir={'column'}>
+										<Heading
+											fontSize={'lg'}
+											marginBottom={2}
+											fontFamily={'fonts.open'}
+										>
+											Ingeniero Mecánico (UNRC) y diplomado en gestión de
+											activos y mantenimiento (UTN)
+										</Heading>
+										<Text fontSize={'sm'}>
+											Experiencia en diseño y desarrollo de diferentes proyectos
+											de ingeniería en industrias como la automotriz, medicina y
+											metalmecánica. Experiencia en desarrollo de proyectos,
+											gestión de mantenimiento y operación de plantas de biogás.
+										</Text>
+									</Flex>
+								</AccordionPanel>
+							</AccordionItem>
+						</Accordion>
+					</Flex>
+				</Box>
+				<Box
+					width={isMobile ? '100%' : '45%'}
+					borderRadius={20}
+					backdropFilter={'auto'}
+					bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+					boxShadow='md'
+					borderColor={colorMode === 'dark' && 'brand.primario'}
+					borderWidth={colorMode === 'dark' && 1}
+					overflow={'hidden'}
+					marginTop={5}
+					marginBottom={5}
+					transition={'0.3s'}
+					_hover={{ boxShadow: 'xl' }}
+				>
+					<Box overflow={'hidden'}>
+						<Image
+							src='/assets/teamBullo.webp'
+							alt='Imagen Nicolas Bullo'
+							width={'100%'}
+						/>
+					</Box>
+					<Flex padding={2} flexDir={'column'} justifyContent={'space-between'}>
+						<Accordion allowToggle padding={1} borderColor={'transparent'}>
+							<AccordionItem>
+								<AccordionButton>
+									<Flex
+										alignItems={'center'}
+										justifyContent={'space-between'}
+										width={'100%'}
+									>
+										<Heading color={'brand.primario'} fontSize={'xl'}>
+											Nicolás Bullo
+										</Heading>
+										<AccordionIcon color={'brand.terciario'} />
+									</Flex>
+								</AccordionButton>
+								<AccordionPanel
+									bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+									pb={4}
+									fontFamily={'fonts.open'}
+								>
+									<Flex flexDir={'column'}>
+										<Heading
+											fontSize={'lg'}
+											marginBottom={2}
+											fontFamily={'fonts.open'}
+										>
+											Estudiante avanzado de Ing. Agronómica en Facultad De
+											Agronomía y Veterinaria (UNRC)
+										</Heading>
+										<Text fontSize={'sm'}>
+											Se unió a Cleanergy para realizar su trabajo final de
+											grado y desde entonces se encarga de realizar el
+											asesoramiento técnico agronómico para la revalorización
+											del Digestato.
+										</Text>
+									</Flex>
+								</AccordionPanel>
+							</AccordionItem>
+						</Accordion>
+					</Flex>
+				</Box>
+				<Box
+					width={isMobile ? '100%' : '45%'}
+					borderRadius={20}
+					backdropFilter={'auto'}
+					bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+					boxShadow='md'
+					borderColor={colorMode === 'dark' && 'brand.primario'}
+					borderWidth={colorMode === 'dark' && 1}
+					overflow={'hidden'}
+					marginTop={5}
+					marginBottom={5}
+					transition={'0.3s'}
+					_hover={{ boxShadow: 'xl' }}
+				>
+					<Box overflow={'hidden'}>
+						<Image
+							src='/assets/teamMarle.webp'
+							alt='Imagen Marlene Martinez'
+							width={'100%'}
+						/>
+					</Box>
+					<Flex padding={2} flexDir={'column'} justifyContent={'space-between'}>
+						<Accordion allowToggle padding={1} borderColor={'transparent'}>
+							<AccordionItem>
+								<AccordionButton>
+									<Flex
+										alignItems={'center'}
+										justifyContent={'space-between'}
+										width={'100%'}
+									>
+										<Heading color={'brand.primario'} fontSize={'xl'}>
+											Marlene Martinez
+										</Heading>
+										<AccordionIcon color={'brand.terciario'} />
+									</Flex>
+								</AccordionButton>
+								<AccordionPanel
+									bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+									pb={4}
+									fontFamily={'fonts.open'}
+								>
+									<Flex flexDir={'column'}>
+										<Heading
+											fontSize={'lg'}
+											marginBottom={2}
+											fontFamily={'fonts.open'}
+										>
+											Estudiante de la carrera Contador Publico Nacional en
+											Universidad Nacional de Cuyo (Mendoza)
+										</Heading>
+										<Text fontSize={'sm'}>
+											Dentro de Cleanergy Renovables S.A. realiza tareas
+											administrativas.
+										</Text>
+									</Flex>
+								</AccordionPanel>
+							</AccordionItem>
+						</Accordion>
+					</Flex>
+				</Box>
 			</Flex>
 		</Flex>
 	);
