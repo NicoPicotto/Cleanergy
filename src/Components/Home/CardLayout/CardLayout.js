@@ -63,9 +63,9 @@ const CardLayout = () => {
 						</Heading>
 						<Divider color={'brand.primario'} marginBottom={1} />
 						<Text color={'brand.terciario'} fontSize='md'>
-							Ofrecemos soluciones y servicios end-to-end para productores
-							agropecuarios, municipios, e inversores y desarrolladores
-							privados.
+							Ofrecemos soluciones y servicios para productores agropecuarios e
+							industrias alimenticias, municipios, plantas de biogás e
+							inversores.
 						</Text>
 					</Flex>
 					<Link to='/biogas'>
@@ -117,8 +117,8 @@ const CardLayout = () => {
 						<Divider color={'brand.primario'} marginBottom={1} />
 						<Text color={'brand.terciario'} fontSize='md'>
 							Te brindamos diferentes alternativas para que aproveches la
-							energía térmica para calentar fluidos, agua caliente sanitaria
-							(ACS), piscinas, y calefacción de ambientes.
+							energía térmica para calentar agua caliente sanitaria (ACS),
+							piscinas, y calefacción de ambientes.
 						</Text>
 					</Flex>
 					<Link to='/solartermico'>
@@ -169,9 +169,9 @@ const CardLayout = () => {
 						</Heading>
 						<Divider color={'brand.primario'} marginBottom={1} />
 						<Text color={'brand.terciario'} fontSize='md'>
-							Dimensionamiento e instalación de sistemas fotovoltaicos llave en
-							mano, te asesoráramos para que puedas instalar tu sistema
-							fotovoltaico de acuerdo a tus necesidades.
+							Diseño e instalación de sistemas fotovoltaicos llave en mano. Te
+							asesoramos para que puedas instalar el sistema fotovoltaico acorde
+							a tus necesidades.
 						</Text>
 					</Flex>
 					<Link to='/solarfotovoltaico'>
@@ -222,8 +222,8 @@ const CardLayout = () => {
 						</Heading>
 						<Divider color={'brand.primario'} marginBottom={1} />
 						<Text color={'brand.terciario'} fontSize='md'>
-							Ofrecemos un servicio integral de gestión de residuos orgánicos
-							para grandes generadores de residuos y municipios.
+							Ofrecemos soluciones para generadores de residuos orgánicos y un
+							servicio integral de gestión de residuos para municipios.
 						</Text>
 					</Flex>
 					<Link to='/residuos'>

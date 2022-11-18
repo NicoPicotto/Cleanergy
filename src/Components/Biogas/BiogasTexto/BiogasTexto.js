@@ -24,8 +24,7 @@ const BiogasTexto = () => {
 						size={isMobile ? 'md' : 'lg'}
 						textAlign={isMobile && 'center'}
 					>
-						Ofrecemos soluciones y servicios end-to-end para productores
-						agropecuarios, municipios, e inversores y desarrolladores privados.
+						Te detallamos nuestras servicios y las soluciones que ofrecemos.
 					</Heading>
 					<Divider borderColor={'brand.terciario'} padding={2} />
 				</Flex>
@@ -37,38 +36,25 @@ const BiogasTexto = () => {
 						borderColor={'brand.secundario'}
 					/>
 					<Flex flexDir={'column'}>
-						<VSensor
-							text='Desarrollo temprano de proyectos: concepción, búsqueda y
-							análisis de oportunidades y riesgos, y prefactibilidad
-							técnico-económica.'
-						/>
-						<VSensor text='Diseño e ingeniería: Conceptual, básica y de detalle.' />
-						<VSensor text='Provisión de tecnología.' />
-						<VSensor
-							text='Gestión Integral de proyecto: Desde el presupuesto y
-									análisis de proveedores y contratistas, hasta la
-									supervisión de la construcción, asistencia y coordinación
-									en gestión de permisos y habilitaciones.'
-						/>
-						<VSensor text='EPC: Ingeniería, procura y construcción.' />
+						<VSensor text='Factibilidad técnico-económica para el desarrollo de proyectos (concepción, relevamientos de datos y análisis de oportunidades y riesgos).' />
+						<VSensor text='Desarrollo de proyectos (aspectos técnicos, legales, administrativos y financieros).' />
+						<VSensor text='Diseño e ingeniería propia (conceptual, básica y de detalle).' />
+						<VSensor text='Ejecución y gestión integral de proyectos. Tanto en modalidad llave en mano o libro abierto. Desde el presupuesto y análisis de proveedores y contratistas, hasta la supervisión de la construcción, asistencia y coordinación en gestión de permisos y habilitaciones.' />
+						<VSensor text='Asesoramiento y gestión de compra de tecnología y equipamiento electromecánico.' />
 						<VSensor text='Puesta en marcha biológica.' />
-						<VSensor
-							text='Operación de plantas en actividad: Gestión logística de
-								transportistas de residuos, monitoreo fisicoquímico y
-								biológico diario, supervisión de operarios de planta,
-								implementación de sistemas de gestión, búsqueda de
-								sustratos alternativos.'
-						/>
-						<VSensor
-							text='Mantenimiento de plantas en actividad: electromecánico del
-								equipamiento de planta, y mantenimientos básicos de CHPs
-								(cambios de filtros, aceites, bujías, limpieza en
-								general).'
-						/>
-						<VSensor
-							text='Owner’s Engineering y optimización de proyectos
-								existentes.'
-						/>
+						<VSensor text='Operación integral de plantas de biogás (para plantas con cualquier tipo de tecnología y antigüedad):' />
+						<Flex paddingLeft={10} as={'i'} flexDir={'column'}>
+							<VSensor text='Plan anual de capacitación teórica-práctica del personal (modalidad charlas y talleres).' />
+							<VSensor text='Asesoramiento biológico y fisicoquímico.' />
+							<VSensor text='Asistencia en la gestión operativa (procedimientos regulares, respuesta ante emergencias, asistencia en adquisición de equipos de monitoreo y control).' />
+							<VSensor text='Asistencia en la gestión del mantenimiento (planes correctivos, preventivos y predictivos, detección de provisión local de componentes mecánicos para reducir importaciones, asistencia en adquisición de equipamiento electromecánico).' />
+							<VSensor
+								text='Factibilidad de uso de residuos orgánicos para reformulación de receta (relevamiento de zona, análisis de potencialidad de sustratos, y análisis de viabilidad económica).
+								'
+							/>
+							<VSensor text='Logística de sustratos y gestión ante proveedores.' />
+							<VSensor text='Reingeniería de plantas y optimización de plantas en operación.' />
+						</Flex>
 					</Flex>
 				</Flex>
 				<Text>

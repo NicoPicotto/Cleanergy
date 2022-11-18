@@ -30,8 +30,7 @@ const CardsProyectos = () => {
 						size={isMobile ? 'md' : 'lg'}
 						textAlign={isMobile && 'center'}
 					>
-						Conocé nuestros proyectos en funcionamiento de 3C Biogás y Alimentos
-						Magros.
+						Proyectos Biogás
 					</Heading>
 					<Divider borderColor={'brand.terciario'} padding={2} />
 				</Flex>
@@ -98,7 +97,7 @@ const CardsProyectos = () => {
 											</Heading>
 											<Text fontSize={'sm'}>
 												• Ubicado sobre Ruta E90 14km. Zona rural de Alcira
-												Gigena, rovincia de Córdoba.
+												Gigena, provincia de Córdoba.
 											</Text>
 											<Text fontSize={'sm'}>
 												• Potencia Contratada: 1MW / Potencia Instalada: 1,3 MW.
@@ -198,6 +197,173 @@ const CardsProyectos = () => {
 							</Accordion>
 						</Flex>
 					</Box>
+				</Flex>
+				<Flex
+					justifyContent={'space-evenly'}
+					alignItems={'center'}
+					overflowX={'hidden'}
+					marginBottom={5}
+					flexDir={isMobile && 'column'}
+					flexWrap={'wrap'}
+				>
+					<Box
+						width={isMobile ? '90vw' : '30vw'}
+						borderRadius={20}
+						backdropFilter={'auto'}
+						bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+						boxShadow='md'
+						borderColor={colorMode === 'dark' && 'brand.primario'}
+						borderWidth={colorMode === 'dark' && 1}
+						overflow={'hidden'}
+						marginTop={5}
+						marginBottom={5}
+						transition={'0.3s'}
+						_hover={{ boxShadow: 'xl' }}
+					>
+						<Box overflow={'hidden'}>
+							<Image
+								src='/assets/proyectoBiogas.webp'
+								alt='Proyecto 3C Biogás'
+								width={'100%'}
+							/>
+						</Box>
+						<Flex
+							padding={2}
+							flexDir={'column'}
+							justifyContent={'space-between'}
+						>
+							<Accordion allowToggle padding={1} borderColor={'transparent'}>
+								<AccordionItem>
+									<AccordionButton>
+										<Flex
+											alignItems={'center'}
+											justifyContent={'space-between'}
+											width={'100%'}
+										>
+											<Heading color={'brand.secundario'} fontSize={'xl'}>
+												CTBG Bell Ville
+											</Heading>
+											<AccordionIcon color={'brand.terciario'} />
+										</Flex>
+									</AccordionButton>
+									<AccordionPanel
+										bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+										pb={4}
+										fontFamily={'fonts.open'}
+									>
+										<Flex flexDir={'column'}>
+											<Heading
+												fontSize={'lg'}
+												marginBottom={2}
+												fontFamily={'fonts.open'}
+											>
+												Datos generales
+											</Heading>
+											<Text fontSize={'sm'}>
+												• Ubicado en la ciudad de Bell Ville, provincia de
+												Córdoba.
+											</Text>
+											<Text fontSize={'sm'}>
+												• Potencia Contratada: 1,2MW / Potencia Instalada: 1,3
+												MW.
+											</Text>
+											<Text fontSize={'sm'}>
+												• Adjudicatarios de proyecto biogás. RenovAr Ronda 3
+											</Text>
+											<Text fontSize={'sm'}>
+												• Adjudicado y en proceso de diseño e ingeniería.
+											</Text>
+										</Flex>
+									</AccordionPanel>
+								</AccordionItem>
+							</Accordion>
+						</Flex>
+					</Box>
+					<Box
+						width={isMobile ? '90vw' : '30vw'}
+						borderRadius={20}
+						backdropFilter={'auto'}
+						bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+						boxShadow='md'
+						borderColor={colorMode === 'dark' && 'brand.primario'}
+						borderWidth={colorMode === 'dark' && 1}
+						overflow={'hidden'}
+						marginTop={5}
+						marginBottom={5}
+						transition={'0.3s'}
+						_hover={{ boxShadow: 'xl' }}
+					>
+						<Box overflow={'hidden'}>
+							<Image
+								src='/assets/proyectoAlimentos.webp'
+								alt='Alimentos Magros'
+								width={'100%'}
+							/>
+						</Box>
+						<Flex
+							padding={2}
+							flexDir={'column'}
+							justifyContent={'space-between'}
+						>
+							<Accordion allowToggle padding={1} borderColor={'transparent'}>
+								<AccordionItem>
+									<AccordionButton>
+										<Flex
+											alignItems={'center'}
+											justifyContent={'space-between'}
+											width={'100%'}
+										>
+											<Heading color={'brand.secundario'} fontSize={'xl'}>
+												CTBG Villa del Rosario
+											</Heading>
+											<AccordionIcon color={'brand.terciario'} />
+										</Flex>
+									</AccordionButton>
+									<AccordionPanel
+										bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+										pb={4}
+										fontFamily={'fonts.open'}
+									>
+										<Flex flexDir={'column'}>
+											<Heading
+												fontSize={'lg'}
+												marginBottom={2}
+												fontFamily={'fonts.open'}
+											>
+												Datos generales
+											</Heading>
+											<Text fontSize={'sm'}>
+												• Ubicado en la ciudad de Villa del Rosario, provincia
+												de Córdoba.
+											</Text>
+											<Text fontSize={'sm'}>
+												• Potencia Instalada: 1MW para autoconsumo.
+											</Text>
+											<Text fontSize={'sm'}>
+												• Adjudicatarios de proyecto biogás. RenovAr Ronda 2.
+											</Text>
+											<Text fontSize={'sm'}>
+												• Adjudicado y transferido previo al inicio de la
+												construcción.
+											</Text>
+										</Flex>
+									</AccordionPanel>
+								</AccordionItem>
+							</Accordion>
+						</Flex>
+					</Box>
+				</Flex>
+				<Flex width={isMobile ? '90vw' : '70vw'} padding={5} flexDir={'column'}>
+					<Heading
+						fontFamily={'fonts.open'}
+						color={'brand.secundario'}
+						padding={2}
+						size={isMobile ? 'md' : 'lg'}
+						textAlign={isMobile && 'center'}
+					>
+						Proyectos Energía Solar
+					</Heading>
+					<Divider borderColor={'brand.terciario'} padding={2} />
 				</Flex>
 			</Flex>
 		</Flex>

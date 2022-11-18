@@ -30,8 +30,7 @@ const ProyectosSolarTermico = () => {
 						size={isMobile ? 'md' : 'lg'}
 						textAlign={isMobile && 'center'}
 					>
-						Aprovechá la energía térmica para calentar fluidos, agua caliente
-						sanitaria (ACS), piscinas, y calefacción de ambientes.
+						¡Contactate con nosotros para sumarte al ahorro energético!
 					</Heading>
 					<Divider borderColor={'brand.terciario'} padding={2} />
 				</Flex>
@@ -89,117 +88,17 @@ const ProyectosSolarTermico = () => {
 										fontFamily={'fonts.open'}
 									>
 										<Flex flexDir={'column'}>
-											<Heading
-												fontSize={'lg'}
-												marginBottom={2}
-												fontFamily={'fonts.open'}
-											>
-												Mantas EPDM
-											</Heading>
-											<Text fontSize={'sm'}>
-												• Eleva la temperatura del agua en 10 ºC.{' '}
-											</Text>
-											<Text fontSize={'sm'}>
-												• No consume Energía Eléctrica o Gas.
-											</Text>
-											<Text fontSize={'sm'}>
-												• Sistema de tubos de NBR.PVC que no se daña con la
-												radiación solar.{' '}
-											</Text>
-											<Text fontSize={'sm'}>• Fácil de instalar.</Text>
-											<Text fontSize={'sm'}>
-												• Utiliza el mismo sistema de recirculación de la
-												pileta.
-											</Text>
 											<Text fontSize={'sm'} marginBottom={2}>
-												• Sistemas modulares.{' '}
+												Existen diferentes tecnologías de colectores solares que
+												permiten elevar la temperatura del agua en 10 ºC, no
+												consumen energía eléctrica o gas, son fáciles de
+												instalar y utilizan el mismo sistema de recirculación de
+												la pileta.
 											</Text>
-											<Heading
-												fontSize={'lg'}
-												marginBottom={2}
-												fontFamily={'fonts.open'}
-											>
-												¿Cuántas mantas necesito para mi piscina?
-											</Heading>
-											<Text fontSize={'sm'} marginBottom={2}>
-												La superficie necesaria para el calentamiento de una
-												piscina es 0.5 a 1 veces la misma y cada manta posee 4m2
-												de superficie. Ejemplo: si tengo que calentar una
-												piscina de 8 x 4 (32m2), necesitaría entre 16-32 m2 de
-												superficie en mantas, lo que equivale a 4-8 módulos
-												EPDM.{' '}
+											<Text fontSize={'sm'} as={"b"}>
+												¡Podrás disfrutar de tu pileta desde septiembre hasta
+												abril!
 											</Text>
-											<Flex justify={'space-between'} marginTop={2}>
-												<Flex
-													width={'33%'}
-													bgColor={'brand.secundario'}
-													alignItems={'center'}
-													flexDirection={'column'}
-													padding={1}
-													borderRadius={5}
-												>
-													<Heading
-														color={'white'}
-														fontSize={'lg'}
-														fontFamily={'fonts.open'}
-													>
-														2x5 m
-													</Heading>
-													<Text
-														color={'white'}
-														fontSize={'xs'}
-														textAlign={'center'}
-													>
-														3 Mantas EPDM
-													</Text>
-												</Flex>
-												<Flex
-													width={'33%'}
-													bgColor={'brand.secundario'}
-													alignItems={'center'}
-													flexDirection={'column'}
-													padding={1}
-													borderRadius={5}
-												>
-													<Heading
-														color={'white'}
-														fontSize={'lg'}
-														fontFamily={'fonts.open'}
-													>
-														3x7 m
-													</Heading>
-													<Text
-														color={'white'}
-														fontSize={'xs'}
-														textAlign={'center'}
-													>
-														5 Mantas EPDM
-													</Text>
-												</Flex>
-												<Flex
-													width={'33%'}
-													bgColor={'brand.secundario'}
-													alignItems={'center'}
-													flexDirection={'column'}
-													padding={1}
-													borderRadius={5}
-												>
-													<Heading
-														color={'white'}
-														fontSize={'lg'}
-														fontFamily={'fonts.open'}
-													>
-														4x11 m
-													</Heading>
-													<Text
-														color={'white'}
-														fontSize={'xs'}
-														textAlign={'center'}
-													>
-														11 Mantas EPDM
-													</Text>
-												</Flex>
-											</Flex>
 										</Flex>
 									</AccordionPanel>
 								</AccordionItem>

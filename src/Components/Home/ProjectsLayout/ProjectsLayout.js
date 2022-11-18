@@ -60,11 +60,13 @@ const ProjectsLayout = () => {
 							fontSize={'1.5em'}
 							marginBottom={1}
 						>
-							Proyecto 3C Biogás
+							CT Gigena - 3C Biogás SA
 						</Heading>
 						<Divider color={'brand.primario'} marginBottom={1} />
 						<Text color={'brand.terciario'} fontSize='md'>
-							Planta para autoconsumo de energía - 1,2 Mw.
+							Planta de biogás de 1MW. Utiliza residuos orgánicos
+							agroindustriales para producir energía eléctrica, la cual se
+							vende a CAMMESA.
 						</Text>
 					</Flex>
 					<Link to='/proyectos'>
@@ -111,11 +113,13 @@ const ProjectsLayout = () => {
 							fontSize={'1.5em'}
 							marginBottom={1}
 						>
-							Proyecto Alimentos Magros
+							Alimentos Magros
 						</Heading>
 						<Divider color={'brand.primario'} marginBottom={1} />
 						<Text color={'brand.terciario'} fontSize='md'>
-							Planta para autoconsumo de energía - 400 Kw.
+							Planta de biogás de 0,4MW. Utiliza sus propios residuos orgánicos
+							para generar energía eléctrica y autoconsumirla en su proceso
+							productivo.
 						</Text>
 					</Flex>
 					<Link to='/proyectos'>

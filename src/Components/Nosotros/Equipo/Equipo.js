@@ -94,13 +94,14 @@ const Equipo = () => {
 											marginBottom={2}
 											fontFamily={'fonts.open'}
 										>
-											Licenciado en Biotecnología (UNR), PhD en Biotecnología
-											(Universidad de Glasgow, Reino Unido)
+											Gerente
 										</Heading>
-										<Text fontSize={'sm'}>
-											Vasta experiencia en Medio Ambiente, investigación y
-											desarrollo de procesos biotecnológicos y gestión de
-											residuos sólidos urbanos (GIRSU).
+										<Text fontSize={'sm'} as={'i'}>
+											Licenciado en Biotecnología (UNR), PhD en Biotecnología
+											(Universidad de Glasgow, Reino Unido). Vasta experiencia
+											en investigación, desarrollo, estructuración y gestión de
+											proyectos de energía renovable, gestión ambiental y de
+											residuos sólidos urbanos e industriales.
 										</Text>
 									</Flex>
 								</AccordionPanel>
@@ -155,9 +156,10 @@ const Equipo = () => {
 											marginBottom={2}
 											fontFamily={'fonts.open'}
 										>
-											Licenciada en Ambiente y Energías Renovables (UNVM)
+											Responsable de Operación y Logística
 										</Heading>
-										<Text fontSize={'sm'}>
+										<Text fontSize={'sm'} as={'i'}>
+											Licenciada en Ambiente y Energías Renovables (UNVM).
 											Experiencia en diseño y desarrollo de proyectos solares
 											fotovoltaicos de pequeña y mediana escala y en gestión de
 											residuos orgánicos agroindustriales y operación de plantas
@@ -216,14 +218,75 @@ const Equipo = () => {
 											marginBottom={2}
 											fontFamily={'fonts.open'}
 										>
-											Ingeniero Mecánico (UNRC) y diplomado en gestión de
-											activos y mantenimiento (UTN)
+											Responsable de Ingeniería y Mantenimiento
 										</Heading>
-										<Text fontSize={'sm'}>
-											Experiencia en diseño y desarrollo de diferentes proyectos
-											de ingeniería en industrias como la automotriz, medicina y
-											metalmecánica. Experiencia en desarrollo de proyectos,
-											gestión de mantenimiento y operación de plantas de biogás.
+										<Text fontSize={'sm'} as={'i'}>
+											Ingeniero Mecánico (UNRC) y diplomado en gestión de
+											activos y mantenimiento (UTN). Experiencia en diseño y
+											desarrollo de diferentes proyectos de ingeniería en
+											industrias como la automotriz, medicina y metalmecánica.
+											Experiencia en desarrollo de proyectos, gestión de
+											mantenimiento y operación de plantas de biogás.
+										</Text>
+									</Flex>
+								</AccordionPanel>
+							</AccordionItem>
+						</Accordion>
+					</Flex>
+				</Box>
+				<Box
+					width={isMobile ? '100%' : '45%'}
+					borderRadius={20}
+					backdropFilter={'auto'}
+					bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+					boxShadow='md'
+					borderColor={colorMode === 'dark' && 'brand.primario'}
+					borderWidth={colorMode === 'dark' && 1}
+					overflow={'hidden'}
+					marginTop={5}
+					marginBottom={5}
+					transition={'0.3s'}
+					_hover={{ boxShadow: 'xl' }}
+				>
+					<Box overflow={'hidden'}>
+						<Image
+							src='/assets/teamMR.webp'
+							alt='Imagen Nicolas Bullo'
+							width={'100%'}
+						/>
+					</Box>
+					<Flex padding={2} flexDir={'column'} justifyContent={'space-between'}>
+						<Accordion allowToggle padding={1} borderColor={'transparent'}>
+							<AccordionItem>
+								<AccordionButton>
+									<Flex
+										alignItems={'center'}
+										justifyContent={'space-between'}
+										width={'100%'}
+									>
+										<Heading color={'brand.primario'} fontSize={'xl'}>
+											Martín Romagnoli
+										</Heading>
+										<AccordionIcon color={'brand.terciario'} />
+									</Flex>
+								</AccordionButton>
+								<AccordionPanel
+									bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+									pb={4}
+									fontFamily={'fonts.open'}
+								>
+									<Flex flexDir={'column'}>
+										<Heading
+											fontSize={'lg'}
+											marginBottom={2}
+											fontFamily={'fonts.open'}
+										>
+											Responsable de Gestión Ambiental
+										</Heading>
+										<Text fontSize={'sm'} as={'i'}>
+											Ingeniero Ambiental (UNL). Experiencia en implementación
+											de sistemas de gestión y control documental, y asesoría
+											del cumplimiento legal en materia ambiental.
 										</Text>
 									</Flex>
 								</AccordionPanel>
@@ -278,14 +341,14 @@ const Equipo = () => {
 											marginBottom={2}
 											fontFamily={'fonts.open'}
 										>
-											Estudiante avanzado de Ing. Agronómica en Facultad De
-											Agronomía y Veterinaria (UNRC)
+											Responsable de valorización agronómica del digestato
 										</Heading>
 										<Text fontSize={'sm'}>
-											Se unió a Cleanergy para realizar su trabajo final de
-											grado y desde entonces se encarga de realizar el
-											asesoramiento técnico agronómico para la revalorización
-											del Digestato.
+											Estudiante avanzado de Ing. Agronómica en Facultad De
+											Agronomía y Veterinaria (UNRC). Se unió a Cleanergy para
+											realizar su trabajo final de grado y desde entonces se
+											encarga de realizar el asesoramiento técnico agronómico
+											para la revalorización del Digestato.
 										</Text>
 									</Flex>
 								</AccordionPanel>
@@ -340,12 +403,13 @@ const Equipo = () => {
 											marginBottom={2}
 											fontFamily={'fonts.open'}
 										>
-											Estudiante de la carrera Contador Publico Nacional en
-											Universidad Nacional de Cuyo (Mendoza)
+											Administrativa
 										</Heading>
 										<Text fontSize={'sm'}>
-											Dentro de Cleanergy Renovables S.A. realiza tareas
-											administrativas.
+											Estudiante de la carrera Contador Publico Nacional en
+											Universidad Nacional de Cuyo (Mendoza). Dentro de
+											Cleanergy Renovables S.A. realiza tareas administrativas
+											varias.
 										</Text>
 									</Flex>
 								</AccordionPanel>

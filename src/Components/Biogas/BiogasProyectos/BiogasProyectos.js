@@ -40,10 +40,13 @@ const BiogasProyectos = () => {
 					fontFamily={'fonts.open'}
 					color={'brand.secundario'}
 					padding={2}
-					size={isMobile ? 'md' : 'lg'}
+					size={'md'}
 					textAlign={isMobile && 'center'}
 				>
-					Proyectos en Argentina
+					Nuestro equipo participó de la realización de diversos análisis
+					técnicos, reportes de producción de energía (RPE), y estudios de
+					prefactibilidad para una cartera de más de 20 proyectos, en el marco
+					del autoconsumo, el MATER y del Programa RenovAr.
 				</Heading>
 				<Divider borderColor={'brand.terciario'} padding={2} />
 			</Flex>
