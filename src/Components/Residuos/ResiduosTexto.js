@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-	Flex,
-	Divider,
-	Heading,
-	useMediaQuery,
-} from '@chakra-ui/react';
+import { Flex, Divider, Heading, useMediaQuery } from '@chakra-ui/react';
 import VSensor from '../Animations/VSensor';
 
 const ResiduosTexto = () => {
@@ -21,8 +16,10 @@ const ResiduosTexto = () => {
 						size={isMobile ? 'md' : 'lg'}
 						textAlign={isMobile && 'center'}
 					>
-						Ofrecemos un servicio integral de gestión de residuos orgánicos para
-						grandes generadores de residuos y municipios.
+						Ofrecemos soluciones para generadores de residuos orgánicos y un
+						servicio integral de gestión de residuos para municipios. Contactate
+						con nosotros y te ayudamos a sumarte a las 4R (Reducir, Reutilizar,
+						Reciclar y Recuperar energía).
 					</Heading>
 					<Divider borderColor={'brand.terciario'} padding={2} />
 				</Flex>
@@ -33,10 +30,12 @@ const ResiduosTexto = () => {
 						borderColor={'brand.secundario'}
 					/>
 					<Flex flexDir={'column'}>
-						<VSensor text='Capacitaciones para una adecuada separación en origen (Industrias, instituciones, municipios).' />
-						<VSensor text='Caracterización de corrientes residuales para obtener su potencial energético.' />
+						<VSensor text='Proveemos tecnología para recuperar cada corriente de residuos, inorgánicos y orgánicos.' />
+						<VSensor text='Proveemos tecnología para recuperar la energía que contienen las diferentes corrientes de residuos.' />
+						<VSensor text='Brindamos capacitaciones para una adecuada separación en origen (escuelas, industrias, instituciones, municipios).' />
+						<VSensor text='Caracterización fisicoquímica de corrientes residuales para obtener su potencial energético.' />
 						<VSensor text='Logística de residuos hasta el punto de revalorización más cercano.' />
-						<VSensor text='Reciclaje de aceite usado de cocina.' />
+						<VSensor text='Puntos limpios y revalorización energética de aceite vegetal usado.' />
 					</Flex>
 				</Flex>
 			</Flex>

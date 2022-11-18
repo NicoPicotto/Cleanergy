@@ -30,9 +30,9 @@ const ProyectosSolarFotovoltaico = () => {
 						size={isMobile ? 'md' : 'lg'}
 						textAlign={isMobile && 'center'}
 					>
-						Dimensionamiento e instalación de sistemas fotovoltaicos llave en
-						mano, te asesoráramos para que puedas instalar tu sistema
-						fotovoltaico de acuerdo a tus necesidades.
+						¡Envianos tu factura de servicio eléctrico y te diseñamos y
+						presupuestamos un sistema fotovoltaico para comenzar a reducir
+						costos!
 					</Heading>
 					<Divider borderColor={'brand.terciario'} padding={2} />
 				</Flex>
@@ -94,9 +94,9 @@ const ProyectosSolarFotovoltaico = () => {
 												Estos sistemas son ideales para aquellos lugares donde
 												la red de energía eléctrica no llega (zona rural,
 												sierras de Córdoba, motor home, etc). Son sistemas
-												asociados a baterías capaces de suministrar energía a
-												los consumos durante las 24 hs del día. Estos sistemas
-												requieren un dimensionamiento según el proyecto.
+												asociados a baterías capaces de suministrar energía
+												durante las 24 hs del día. Estos sistemas requieren un
+												dimensionamiento según el proyecto.
 											</Text>
 											<Heading
 												fontSize={'lg'}
@@ -195,15 +195,14 @@ const ProyectosSolarFotovoltaico = () => {
 									>
 										<Flex flexDir={'column'}>
 											<Text fontSize={'sm'} marginBottom={2}>
-												Sistema de energía limpia, que genera electricidad a
-												través de un grupo de paneles solares. El sistema, sin
-												bacterias, usa la red distribuidora para inyectar lo que
-												excede de esa generación, o bien para suministrar lo que
-												el sistema propio no puede generar en ciertos momentos,
-												como la noche o días nublados. El sistema se ocupa
-												automáticamente de gestionar el flujo de energía de modo
-												que no se noatará cuando la energía que usamos es propia
-												o dela red.
+												Estos sistemas, sin baterías, utilizan la red
+												distribuidora para inyectar la energía excedente si la
+												generación supera al consumo en un dado momento, o bien,
+												para abastecerse cuando el consumo supera la generación,
+												por ejemplo, durante la noche o días nublados. El
+												sistema se ocupa automáticamente de gestionar el flujo
+												de energía de modo que no se percibe cuando la energía
+												que usamos es propia o de la red.
 											</Text>
 											<Heading
 												fontSize={'lg'}

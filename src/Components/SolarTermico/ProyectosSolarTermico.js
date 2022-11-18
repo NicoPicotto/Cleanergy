@@ -95,7 +95,7 @@ const ProyectosSolarTermico = () => {
 												instalar y utilizan el mismo sistema de recirculación de
 												la pileta.
 											</Text>
-											<Text fontSize={'sm'} as={"b"}>
+											<Text fontSize={'sm'} as={'b'}>
 												¡Podrás disfrutar de tu pileta desde septiembre hasta
 												abril!
 											</Text>
@@ -151,27 +151,20 @@ const ProyectosSolarTermico = () => {
 										fontFamily={'fonts.open'}
 									>
 										<Flex flexDir={'column'}>
-											<Heading
-												fontSize={'lg'}
-												marginBottom={2}
-												fontFamily={'fonts.open'}
-											>
-												Ahorra hasta un 80% de gas o electricidad.
-											</Heading>
-											<Text fontSize={'sm'} marginBottom={2}>
+											<Text fontSize={'sm'} marginBottom={4}>
 												Los termotanques solares permiten obtener agua caliente
-												sanitaria (ACS) utilizando la energía del sol, lo cual
-												lo convierte en una gran alternativa en aquellos hogares
-												en donde no se cuenta con red de gas natural. Además,
-												permiten ahorrar hasta un 80% de gas o electricidad en
-												comparación con un Termotanque convencional.
+												sanitaria (ACS) y ahorrar hasta un 80% de gas o
+												electricidad en el año. Además, podés adaptarle una
+												resistencia eléctrica para calentar el agua en días con
+												poca radiación solar y así prescindir totalmente de tu
+												termotanque convencional.
 											</Text>
 											<Heading
-												fontSize={'lg'}
+												fontSize={'md'}
 												marginBottom={2}
 												fontFamily={'fonts.open'}
 											>
-												¿Cómo elegir un TST para mi hogar?
+												¿Cómo elegir un Termotanque Solar para mi hogar?
 											</Heading>
 											<Text fontSize={'sm'}>
 												Se calculan 50 lts de agua por persona por día.
@@ -219,7 +212,7 @@ const ProyectosSolarTermico = () => {
 											width={'100%'}
 										>
 											<Heading color={'brand.primario'} fontSize={'xl'}>
-												Climatización de Ambientes
+												Climatización por Aerotermia
 											</Heading>
 											<AccordionIcon color={'brand.terciario'} />
 										</Flex>
@@ -230,30 +223,16 @@ const ProyectosSolarTermico = () => {
 										fontFamily={'fonts.open'}
 									>
 										<Flex flexDir={'column'}>
-											<Heading
-												fontSize={'lg'}
-												marginBottom={2}
-												fontFamily={'fonts.open'}
-											>
-												La climatización más eficaz contra el frío.
-											</Heading>
-											<Text fontSize={'sm'} marginBottom={2}>
-												Una bomba de calor es un dispositivo utilizado para
-												producir calor utilizando la temperatura del aire o
-												aerotermia. Este equipo puede reemplazar a una caldera
-												en forma directa produciendo agua caliente para uso
-												sanitario o calefacción. El COP o Coeficient of
-												Performance es de 4 a 1 aprox. Es decir que por cada W
-												de energía.
-											</Text>
 											<Text fontSize={'sm'}>
-												• Reduce los costos de facturación en Energía Eléctrica
-												o Gas.
-											</Text>
-											<Text fontSize={'sm'}>• Mantenimiento sencillo.</Text>
-											<Text fontSize={'sm'}>
-												• Puede proporcionar refrigeración, calefacción y agua
-												caliente.
+												La bomba de calor es un sistema de climatización que
+												utiliza la energía disponible en el aire para producir
+												calor o frío. Es un sistema que consume energía
+												eléctrica de manera muy eficiente por utilizar un
+												recurso natural renovable, y es de mantenimiento
+												sencillo, por lo tanto reduce los costos. Además, es muy
+												versátil ya que puede utilizarse para calefaccionar
+												hogares (losas radiantes, radiadores), piscinas y
+												también agua caliente sanitaria.
 											</Text>
 										</Flex>
 									</AccordionPanel>
