@@ -14,7 +14,7 @@ const NosotrosTexto = () => {
 			<Flex w={isMobile ? '90vw' : '70vw'} padding={5} flexDir={'column'}>
 				<Heading
 					fontFamily={'fonts.open'}
-					color={'brand.secundario'}
+					color={'brand.primario'}
 					padding={2}
 					size={isMobile ? 'md' : 'lg'}
 					textAlign={isMobile && 'center'}

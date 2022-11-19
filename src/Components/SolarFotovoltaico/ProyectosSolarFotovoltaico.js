@@ -113,7 +113,7 @@ const ProyectosSolarFotovoltaico = () => {
 												• Consumos eléctricos y potencias.
 											</Text>
 											<Text fontSize={'sm'} marginBottom={2}>
-												• Días de autonomías
+												• Días de autonomías.
 											</Text>
 											<Heading
 												fontSize={'lg'}
