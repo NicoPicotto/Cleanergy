@@ -1,5 +1,12 @@
 import React from 'react';
-import { Flex, Heading, Text, Divider, useMediaQuery } from '@chakra-ui/react';
+import {
+	Flex,
+	Heading,
+	Text,
+	Divider,
+	useMediaQuery,
+	Image,
+} from '@chakra-ui/react';
 
 const NosotrosTexto = () => {
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
@@ -23,23 +30,36 @@ const NosotrosTexto = () => {
 				</Heading>
 				<Divider borderColor={'brand.terciario'} padding={2} />
 			</Flex>
-			<Text
+			<Flex
 				w={isMobile ? '90vw' : '70vw'}
-				padding={5}
-				fontFamily={'fonts.open'}
+				flexDir={isMobile && 'column'}
+				paddingLeft={5}
+				alignItems={'flex-start'}
 			>
-				La empresa nace en 2016 con la misión de crear economías circulares,
-				ayudando a generar valor a municipios, industrias y la comunidad
-				mediante sistemas de generación de energía a partir de residuos
-				orgánicos. Creemos que la incorporación de nuevas tecnologías a los
-				emprendimientos productivos, especialmente en la industria
-				agroalimentaria, cambiará la manera de hacer negocios en Argentina y la
-				región, adoptando prácticas más eficientes, y a la vez más sustentables.
-				Es por eso que trabajamos junto a productores agropecuarios e
-				industriales para aprovechar un recurso valioso, que hoy está
-				desaprovechado, generando negocios más rentables, con menor riesgo, y
-				amigables con el medio ambiente y la comunidad en la que trabaja.
-			</Text>
+				<Text
+					fontFamily={'fonts.open'}
+					w={isMobile ? 'auto' : '70%'}
+					padding={5}
+				>
+					La empresa nace en 2016 con la misión de crear economías circulares,
+					ayudando a generar valor a municipios, industrias y la comunidad
+					mediante sistemas de generación de energía a partir de residuos
+					orgánicos. Creemos que la incorporación de nuevas tecnologías a los
+					emprendimientos productivos, especialmente en la industria
+					agroalimentaria, cambiará la manera de hacer negocios en Argentina y
+					la región, adoptando prácticas más eficientes, y a la vez más
+					sustentables. Es por eso que trabajamos junto a productores
+					agropecuarios e industriales para aprovechar un recurso valioso, que
+					hoy está desaprovechado, generando negocios más rentables, con menor
+					riesgo, y amigables con el medio ambiente y la comunidad en la que
+					trabaja.
+				</Text>
+
+				<Image
+					src='/assets/ecocirculares.webp'
+					w={isMobile ? 'auto' : '250px'}
+				/>
+			</Flex>
 		</Flex>
 	);
 };
