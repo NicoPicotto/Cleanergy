@@ -93,7 +93,7 @@ const CardsProyectos = () => {
 												Ruta E90 14km, zona rural de Alcira Gigena, provincia de
 												Córdoba. 3C Biogás procesa 100 m3 por día de residuos
 												orgánicos agroindustriales provenientes de las
-												industrias alimenticias y establecimiento pecuarios de
+												industrias alimenticias y establecimientos pecuarios de
 												la zona, para producir energía eléctrica y digestato
 												(fertilizante orgánico).
 											</Text>

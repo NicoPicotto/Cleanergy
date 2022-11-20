@@ -75,7 +75,11 @@ const BiogasTexto = () => {
 							proyecto. Por otro lado, CLEANERGY no tiene exclusividad con
 							proveedores internacionales de equipamiento, por lo que ofrecemos
 							versatilidad para lograr el contenido nacional de las inversiones
-							requeridas por cada proyecto.
+							requeridas por cada proyecto. Nuestro equipo participó de la
+							realización de diversos análisis técnicos, reportes de producción
+							de energía (RPE), y estudios de prefactibilidad para una cartera
+							de más de 20 proyectos, en el marco del autoconsumo, el MATER y
+							del Programa RenovAr.
 						</Text>
 					</Flex>
 				</Text>
