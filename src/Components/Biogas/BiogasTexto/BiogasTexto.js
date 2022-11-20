@@ -24,7 +24,7 @@ const BiogasTexto = () => {
 						size={isMobile ? 'md' : 'lg'}
 						textAlign={isMobile && 'center'}
 					>
-						Te detallamos nuestras servicios y las soluciones que ofrecemos.
+						Te detallamos nuestros servicios y las soluciones que ofrecemos.
 					</Heading>
 					<Divider borderColor={'brand.terciario'} padding={2} />
 				</Flex>
