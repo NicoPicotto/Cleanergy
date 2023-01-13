@@ -13,7 +13,9 @@ import {
 	AccordionIcon,
 	AccordionPanel,
 	Image,
+	Button,
 } from '@chakra-ui/react';
+import { DownloadIcon } from '@chakra-ui/icons';
 
 const CardsProyectos = () => {
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
@@ -111,13 +113,36 @@ const CardsProyectos = () => {
 												• <Text as='u'>Producción de digestato:</Text>{' '}
 												100m3/día.
 											</Text>
-											<Text fontSize={'sm'}>
+											<Text fontSize={'sm'} marginBottom={4}>
 												<Text as='b'>Rol de Cleanergy:</Text> desarrollo del
 												proyecto, gestión y supervisión de obra, puesta en
 												marcha, gerenciamiento y operación integral de la planta
 												(control biológico y fisicoquímico, logística de
 												sustratos y mantenimiento).
 											</Text>
+										</Flex>
+										<Flex w="100%" justifyContent="space-evenly" flexWrap="wrap">
+											<Button
+												size='sm'
+												colorScheme={'green'}
+												rightIcon={<DownloadIcon />}
+												as="a"
+												href='/assets/5.1-00 Misión, Visión y Valores.pdf'
+												download="5.1-00 Misión, Visión y Valores.pdf"
+												margin={1}											>
+												Misión, visión y valores
+											</Button>
+											<Button
+												size='sm'
+												colorScheme={'green'}
+												rightIcon={<DownloadIcon />}
+												as="a"
+												href='/assets/5.2-00 Política ambiental.pdf'
+												download="5.2-00 Política ambiental.pdf"
+												margin={1}	
+											>
+												Política ambiental
+											</Button>
 										</Flex>
 									</AccordionPanel>
 								</AccordionItem>
