@@ -36,7 +36,7 @@ const DatosCliente = () => {
 			fontFamily={'fonts.open'}
             padding={5}
 			borderRadius={5}
-			shadow='sm'
+			shadow='md'
 			bgColor='brand.primario'
 		>
 			{datos &&

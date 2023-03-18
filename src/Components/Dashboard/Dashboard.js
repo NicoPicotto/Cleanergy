@@ -46,25 +46,7 @@ const Dashboard = () => {
 	return (
 		<Flex justifyContent={'center'} w='100vw'>
 			<Flex width={isMobile ? '90vw' : '70vw'} flexDir={'column'}>
-				<Flex width={isMobile ? '90vw' : '70vw'} flexDir={'column'}>
-					<Flex
-						width={isMobile ? '90vw' : '70vw'}
-						padding={5}
-						flexDir={'column'}
-					>
-						<Heading
-							fontFamily={'fonts.open'}
-							color={'brand.secundario'}
-							padding={2}
-							size={isMobile ? 'md' : 'lg'}
-							textAlign={isMobile && 'center'}
-						>
-							Accedé a todos tus reportes actualizados
-						</Heading>
-						<Divider borderColor={'brand.terciario'} padding={2} />
-					</Flex>
-				</Flex>
-				<Flex flexDir={'column'}>
+				<Flex flexDir={'column'} padding={10}>
 					<DatosCliente />
 					<Flex flexDir='column' marginBottom={5} alignItems="center">
 						{reportes &&
@@ -73,6 +55,7 @@ const Dashboard = () => {
 									key={arch.fecha}
 									fecha={arch.fecha}
 									archivo={arch.archivo}
+									titulo={arch.titulo}
 								/>
 							))}
                             {isLoading && <Spinner color="brand.secundario" size="lg" margin={5} />}
