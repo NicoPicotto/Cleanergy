@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
 	Flex,
 	useColorMode,
@@ -7,6 +7,8 @@ import {
 	Stack,
 	Text,
 } from '@chakra-ui/react';
+import { getDoc, doc } from 'firebase/firestore';
+import { firestore } from "../../../firebase";
 import {
 	BsFillLightningChargeFill,
 	BsFillTrashFill,
@@ -17,6 +19,21 @@ import VisibilitySensor from 'react-visibility-sensor';
 
 const NumbersLayout = () => {
 	const { colorMode } = useColorMode();
+	const [numeros, setNumeros] = useState(null)
+
+	useEffect(() => {
+		const getNumeros = async () => {
+			const docRef = doc(firestore, 'numeros', "tiF3BJeOfNCa6JC1Rho9");
+			const docSnap = await getDoc(docRef);
+
+			if (docSnap.exists()) {
+				setNumeros(docSnap.data());
+			} else {
+				console.log('Error al traer los datos del usuario');
+			}
+		};
+		getNumeros();
+	}, []);
 
 	return (
 		<Flex
@@ -33,7 +50,7 @@ const NumbersLayout = () => {
 					</Heading>
 					<Flex>
 						<Heading>
-							<CountUp end={63035}>
+							<CountUp end={numeros && numeros.residuos}>
 								{({ countUpRef, start }) => (
 									<VisibilitySensor onChange={start}>
 										<span ref={countUpRef} />
@@ -55,7 +72,7 @@ const NumbersLayout = () => {
 					</Heading>
 					<Flex>
 						<Heading>
-							<CountUp end={15617}>
+							<CountUp end={numeros && numeros.electrica}>
 								{({ countUpRef, start }) => (
 									<VisibilitySensor onChange={start}>
 										<span ref={countUpRef} />
@@ -77,7 +94,7 @@ const NumbersLayout = () => {
 					</Heading>
 					<Flex>
 						<Heading>
-							<CountUp end={3900}>
+							<CountUp end={numeros && numeros.solar}>
 								{({ countUpRef, start }) => (
 									<VisibilitySensor onChange={start}>
 										<span ref={countUpRef} />

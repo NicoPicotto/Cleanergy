@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
+import { useAuth } from '../../Context/Context';
 import {
 	Flex,
 	Box,
@@ -16,18 +17,31 @@ import {
 	useColorMode,
 	useMediaQuery,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 import DarkModeSwitch from './DarkModeSwitch/DarkModeSwitch';
 
 const Navbar = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
+	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [placement, setPlacement] = useState('top');
 	const { colorMode } = useColorMode();
+	const navigate = useNavigate();
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
+	const { userUid, user, logout } = useAuth();
+
+	const handleLogout = async () => {
+		onClose()
+		try {
+			await logout();
+			navigate('/');
+		} catch (e) {
+			console.log('Logout');
+		}
+	};
 
 	return (
-	<Flex
+		<Flex
 			height={'10vh'}
 			alignItems={'center'}
 			justifyContent={'space-between'}
@@ -38,7 +52,7 @@ const Navbar = () => {
 			zIndex={100}
 			boxShadow={'md'}
 		>
-            <Box>
+			<Box>
 				<Link to={'/'}>
 					<Image
 						src='/logo.png'
@@ -124,6 +138,16 @@ const Navbar = () => {
 										Proyectos
 									</Button>
 								</Link>
+								<Link to={user ? `/usuario/${userUid}` : '/login'}>
+									<Button
+										color={'brand.primario'}
+										variant={'ghost'}
+										onClick={onClose}
+									>
+										Acceso clientes
+									</Button>
+								</Link>
+								{user && <Button colorScheme='red' variant={'ghost'} onClick={handleLogout}>Salir de mi cuenta</Button>}
 								<DarkModeSwitch />
 							</ButtonGroup>
 						</DrawerContent>
@@ -170,12 +194,18 @@ const Navbar = () => {
 								Proyectos
 							</Button>
 						</Link>
+						<Link to={user ? `/usuario/${userUid}` : '/login'}>
+							<Button color={'brand.primario'} variant={'ghost'}>
+								Acceso clientes
+							</Button>
+						</Link>
+						{user && <Button colorScheme='red' variant={'ghost'} onClick={handleLogout}>Salir de mi cuenta</Button>}
 						<DarkModeSwitch />
 					</ButtonGroup>
 				</Box>
 			)}
-        </Flex>
+		</Flex>
 	);
 };
 
-export default Navbar
+export default Navbar;

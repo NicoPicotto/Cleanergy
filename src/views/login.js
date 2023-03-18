@@ -1,10 +1,11 @@
 import React from 'react'
-import {Flex, Button, Heading, Text, Input, Divider} from "@chakra-ui/react"
+import {Flex} from "@chakra-ui/react"
+import LoginComponent from '../Components/Login/LoginComponent'
 
 const login = () => {
   return (
     <Flex>
-        <Heading>Login</Heading>
+        <LoginComponent />
     </Flex>
   )
 }
