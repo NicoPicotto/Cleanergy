@@ -5,10 +5,6 @@ import {
 	Flex,
 	Heading,
 	Divider,
-	Input,
-	Buton,
-	Text,
-	Stack,
 	useToast,
 	useMediaQuery,
 	Spinner,
@@ -60,6 +56,7 @@ const NumerosHome = () => {
 	return (
 		<Flex
 			w='35%'
+			h="fit-content"
 			borderColor="lightgray"
 			borderWidth={1}
 			shadow="md"

@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-	query,
-	doc,
-	deleteDoc,
-	where,
-	getDocs,
-	collection,
-} from 'firebase/firestore';
+import { query, getDocs, collection } from 'firebase/firestore';
 import { firestore } from '../../firebase';
 import { Flex, Heading, Divider, Select, Text, Stack } from '@chakra-ui/react';
 import ListaArchivos from './ListaArchivos';
@@ -14,7 +7,6 @@ import ListaArchivos from './ListaArchivos';
 const CargarDocumentos = () => {
 	const [cliente, setCliente] = useState(null);
 	const [clienteSeleccionado, setClienteSeleccionado] = useState('');
-	const [archivos, setArchivos] = useState(null);
 
 	useEffect(() => {
 		const getClientes = async () => {
@@ -27,12 +19,12 @@ const CargarDocumentos = () => {
 			setCliente(docs);
 		};
 		getClientes();
-
 	}, []);
 
 	return (
 		<Flex
 			w='65%'
+			h="100%"
 			borderColor='lightgray'
 			borderWidth={1}
 			shadow='md'
@@ -61,7 +53,7 @@ const CargarDocumentos = () => {
 						))}
 				</Select>
 				{clienteSeleccionado && (
-					<ListaArchivos seleccionado={clienteSeleccionado}/>
+					<ListaArchivos seleccionado={clienteSeleccionado} />
 				)}
 			</Stack>
 		</Flex>

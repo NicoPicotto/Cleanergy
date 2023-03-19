@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
 	Stack,
-	Text,
 	Button,
 	Spinner,
 	useToast,
@@ -26,10 +25,8 @@ import {
 	getDocs,
 	collection,
 	addDoc,
-	serverTimestamp,
 } from 'firebase/firestore';
 import { firestore } from '../../firebase';
-import { useNavigate } from 'react-router-dom';
 import { storage } from '../../firebase';
 import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 import ItemsArchivos from './ItemsArchivos';
@@ -37,7 +34,6 @@ import ItemsArchivos from './ItemsArchivos';
 const ListaArchivos = ({ seleccionado }) => {
 	const [archivos, setArchivos] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
-	const navigate = useNavigate();
 	const toast = useToast();
 
 	//Parámetros Modal
@@ -46,8 +42,10 @@ const ListaArchivos = ({ seleccionado }) => {
 	const [file, setFile] = useState('');
 	const [URL, setURL] = useState('');
 	const [titulo, setTitulo] = useState('');
+	const [fecha, setFecha] = useState('');
 	const initialRef = useRef(null);
 	const finalRef = useRef(null);
+	const timestamp = Date.parse(fecha);
 
 	useEffect(() => {
 		const getReportes = async () => {
@@ -67,14 +65,9 @@ const ListaArchivos = ({ seleccionado }) => {
 		getReportes();
 	}, [seleccionado]);
 
-	const refreshPage = () => {
-		window.location.reload(false);
-	};
-
 	//Función para eliminar reporte
 	const handleDelete = async (id) => {
 		await deleteDoc(doc(firestore, 'archivos', id));
-		refreshPage()
 		toast({
 			title: '¡Producto eliminado!',
 			status: 'error',
@@ -116,7 +109,7 @@ const ListaArchivos = ({ seleccionado }) => {
 				titulo,
 				archivo: URL,
 				idcliente: seleccionado,
-				fecha: serverTimestamp(),
+				fecha: timestamp,
 			});
 			toast({
 				title: '¡Documento cargado con éxito! 😎',
@@ -127,7 +120,6 @@ const ListaArchivos = ({ seleccionado }) => {
 				position: 'top',
 			});
 			setIsLoading(false);
-			refreshPage()
 		} else {
 			toast({
 				title: 'Tenés campos sin completar.',
@@ -184,6 +176,15 @@ const ListaArchivos = ({ seleccionado }) => {
 								placeholder='Titulo'
 							/>
 						</FormControl>
+						<FormControl>
+							<FormLabel mt={4}>Fecha</FormLabel>
+							<Input
+								value={fecha}
+								onChange={(e) => setFecha(e.target.value)}
+								type='date'
+								name='timestamp'
+							/>
+						</FormControl>
 						<FormControl mt={4}>
 							<FormLabel>ID Cliente</FormLabel>
 							<Input value={seleccionado} isDisabled />
@@ -212,7 +213,7 @@ const ListaArchivos = ({ seleccionado }) => {
 								<Progress
 									marginTop={1}
 									color={
-										progress == 100 ? 'brand.secundario' : 'brand.primario'
+										progress === 100 ? 'brand.secundario' : 'brand.primario'
 									}
 									value={progress}
 								/>
@@ -221,7 +222,7 @@ const ListaArchivos = ({ seleccionado }) => {
 					</ModalBody>
 
 					<ModalFooter>
-						{URL && titulo ? (
+						{URL && titulo && fecha ? (
 							<Button colorScheme='green' mr={3} type='submit'>
 								Subir Documento
 							</Button>

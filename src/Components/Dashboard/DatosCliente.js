@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Flex, Heading, Stack, StackDivider, Text, useMediaQuery, Button } from '@chakra-ui/react';
+import { Flex, Heading, Stack, StackDivider, useMediaQuery } from '@chakra-ui/react';
 import { useAuth } from '../../Context/Context';
 import {
 	query,
@@ -11,6 +11,7 @@ import { firestore } from '../../firebase';
 
 const DatosCliente = () => {
 	const { userUid } = useAuth();
+	
 	const [datos, setDatos] = useState(null);
     const [isMobile] = useMediaQuery('(max-width: 1100px)');
 

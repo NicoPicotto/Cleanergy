@@ -31,7 +31,7 @@ const Navbar = () => {
 	const { userUid, user, logout } = useAuth();
 
 	const handleLogout = async () => {
-		onClose()
+		onClose();
 		try {
 			await logout();
 			navigate('/');
@@ -144,10 +144,18 @@ const Navbar = () => {
 										variant={'ghost'}
 										onClick={onClose}
 									>
-										Acceso clientes
+										{user ? 'Ver mis reportes' : 'Acceso clientes'}
 									</Button>
 								</Link>
-								{user && <Button colorScheme='red' variant={'ghost'} onClick={handleLogout}>Salir de mi cuenta</Button>}
+								{user && (
+									<Button
+										colorScheme='red'
+										variant={'ghost'}
+										onClick={handleLogout}
+									>
+										Salir de mi cuenta
+									</Button>
+								)}
 								<DarkModeSwitch />
 							</ButtonGroup>
 						</DrawerContent>
@@ -196,10 +204,18 @@ const Navbar = () => {
 						</Link>
 						<Link to={user ? `/usuario/${userUid}` : '/login'}>
 							<Button color={'brand.primario'} variant={'ghost'}>
-								Acceso clientes
+							{user ? 'Ver mis reportes' : 'Acceso clientes'}
 							</Button>
 						</Link>
-						{user && <Button colorScheme='red' variant={'ghost'} onClick={handleLogout}>Salir de mi cuenta</Button>}
+						{user && (
+							<Button
+								colorScheme='red'
+								variant={'ghost'}
+								onClick={handleLogout}
+							>
+								Salir de mi cuenta
+							</Button>
+						)}
 						<DarkModeSwitch />
 					</ButtonGroup>
 				</Box>

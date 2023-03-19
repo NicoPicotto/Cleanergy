@@ -2,7 +2,8 @@ import React from 'react';
 import { Stack, Text, Button, StackDivider } from '@chakra-ui/react';
 
 const Archivos = ({ fecha, archivo, titulo }) => {
-	const fechaFormateada = fecha.toDate().toLocaleDateString('es-ES');
+	
+	const dateFormat = new Date(fecha).toLocaleDateString("es-ES")
 
 	return (
 		<Stack
@@ -20,7 +21,7 @@ const Archivos = ({ fecha, archivo, titulo }) => {
 			<Stack direction='row' justify='space-between' w='100%' align='center'>
 				<Stack>
 					<Text as='b'>{titulo}</Text>
-					<Text fontSize='sm' lineHeight="none">{fechaFormateada}</Text>
+					<Text fontSize='sm' lineHeight="none">{dateFormat}</Text>
 				</Stack>
 
 				<Button

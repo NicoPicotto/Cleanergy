@@ -12,16 +12,18 @@ import {
 	Input,
 	Button,
 	Spinner,
+	useToast
 } from '@chakra-ui/react';
 
 const LoginComponent = () => {
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 	const [isLoading, setIsLoading] = useState(false);
+	const toast = useToast()
 	const { colorMode } = useColorMode();
 
 	const { userUid } = useAuth();
-
 	const { login, resetPassword } = useAuth();
+
 	const [user, setUser] = useState({
 		email: '',
 		password: '',
@@ -35,7 +37,15 @@ const LoginComponent = () => {
 		setIsLoading(true);
 		try {
 			await login(user.email, user.password);
-			navigate(`/usuario/${userUid}`);
+			toast({
+				title: '¡Bienvenido/a! 😎',
+				status: 'success',
+				duration: 7000,
+				isClosable: true,
+				variant: 'top-accent',
+				position: 'top',
+			});
+			navigate("/");
 		} catch (error) {
 			setError('El mail o contraseña son incorrectas');
 		}

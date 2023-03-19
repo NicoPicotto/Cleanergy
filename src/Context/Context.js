@@ -25,6 +25,12 @@ export const ContextProvider = ({ children }) => {
 		return signInWithEmailAndPassword(auth, email, password);
 	};
 
+	const registrarse = (email, password) => {
+		setLoading(true)
+		createUserWithEmailAndPassword(auth, email, password);
+		setLoading(false)
+	};
+
 	const logout = () => {
 		signOut(auth);
 	};
@@ -46,6 +52,7 @@ export const ContextProvider = ({ children }) => {
 			value={{
 				login,
 				logout,
+				registrarse,
 				resetPassword,
 				loading,
 				user,
