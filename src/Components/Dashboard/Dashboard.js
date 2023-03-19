@@ -30,7 +30,7 @@ const Dashboard = () => {
 			const docs = [];
 			const q = query(
 				collection(firestore, 'archivos'),
-				where('id-cliente', '==', paramsID.id)
+				where('idcliente', '==', paramsID.id)
 			);
 			const querySnapshot = await getDocs(q);
 			querySnapshot.forEach((doc) => {

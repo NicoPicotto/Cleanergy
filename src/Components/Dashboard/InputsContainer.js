@@ -15,37 +15,33 @@ const InputsContainer = ({
 	return (
 		<Stack spacing={5}>
 			<Stack>
-				<Text margin={0} fontSize='sm' as='b' color='white'>
+				<Text margin={0} fontSize='sm' as='b'>
 					Residuos orgánicos revalorizados
 				</Text>
 				<Input
 					value={nuevoResiduo}
 					onChange={(e) => setNuevoResiduos(e.target.value)}
 					variant='outline'
-					color='white'
-					_focus={{ bgColor: 'white', color: 'black' }}
+					_focus={{ bgColor: 'white' }}
 					isRequired
 				/>
-				<Text margin={0} fontSize='sm' as='b' color='white'>
-					Energía eléctrica renovable producida
+				<Text margin={0} fontSize='sm' as='b'>
+					Energía eléc. renovable producida
 				</Text>
 				<Input
 					value={nuevoElectricidad}
 					onChange={(e) => setNuevoElectricidad(e.target.value)}
-					variant='outline'
-					color='white'
-					_focus={{ bgColor: 'white', color: 'black' }}
+					_focus={{ bgColor: 'white' }}
 					isRequired
 				/>
-				<Text margin={0} fontSize='sm' as='b' color='white'>
+				<Text margin={0} fontSize='sm' as='b'>
 					ACS Solar instalados
 				</Text>
 				<Input
 					value={nuevoSolar}
 					onChange={(e) => setNuevoSolar(e.target.value)}
 					variant='outline'
-					color='white'
-					_focus={{ bgColor: 'white', color: 'black' }}
+					_focus={{ bgColor: 'white' }}
 					isRequired
 				/>
 			</Stack>

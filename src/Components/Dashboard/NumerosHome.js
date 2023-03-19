@@ -59,15 +59,17 @@ const NumerosHome = () => {
 
 	return (
 		<Flex
-			w='350px'
-			bgColor='brand.primario'
+			w='35%'
+			borderColor="lightgray"
+			borderWidth={1}
+			shadow="md"
 			padding={5}
 			borderRadius={5}
 			flexDir='column'
 			fontFamily={'fonts.open'}
 		>
-			<Heading size='md' color='white' fontFamily={'fonts.open'}>
-				Números home
+			<Heading size='md' color='brand.primario' fontFamily={'fonts.open'}>
+				Números Home
 			</Heading>
 			<Divider marginBlock={2} />
 			{numerosHome ? (
@@ -79,7 +81,7 @@ const NumerosHome = () => {
 					handleUpdate={handleUpdate}
 				/>
 			) : (
-				<Spinner color='white' />
+				<Spinner color='brand.primario' />
 			)}
 		</Flex>
 	);
