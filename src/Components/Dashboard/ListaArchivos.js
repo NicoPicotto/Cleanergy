@@ -16,6 +16,7 @@ import {
 	FormLabel,
 	Input,
 	Progress,
+	Flex
 } from '@chakra-ui/react';
 import {
 	query,
@@ -23,6 +24,7 @@ import {
 	deleteDoc,
 	where,
 	getDocs,
+	orderBy,
 	collection,
 	addDoc,
 } from 'firebase/firestore';
@@ -43,6 +45,7 @@ const ListaArchivos = ({ seleccionado }) => {
 	const [URL, setURL] = useState('');
 	const [titulo, setTitulo] = useState('');
 	const [fecha, setFecha] = useState('');
+	const [submited, setSubmited] = useState(false);
 	const initialRef = useRef(null);
 	const finalRef = useRef(null);
 	const timestamp = Date.parse(fecha);
@@ -53,7 +56,8 @@ const ListaArchivos = ({ seleccionado }) => {
 			const docs = [];
 			const q = query(
 				collection(firestore, 'archivos'),
-				where('idcliente', '==', seleccionado)
+				where('idcliente', '==', seleccionado),
+				orderBy('fecha', 'desc')
 			);
 			const querySnapshot = await getDocs(q);
 			querySnapshot.forEach((doc) => {
@@ -63,7 +67,7 @@ const ListaArchivos = ({ seleccionado }) => {
 			setIsLoading(false);
 		};
 		getReportes();
-	}, [seleccionado]);
+	}, [seleccionado, submited]);
 
 	//Función para eliminar reporte
 	const handleDelete = async (id) => {
@@ -120,6 +124,13 @@ const ListaArchivos = ({ seleccionado }) => {
 				position: 'top',
 			});
 			setIsLoading(false);
+			onClose();
+			setTitulo('');
+			setFile('');
+			setFecha('');
+			setURL('');
+			setProgress(0);
+			setSubmited(!submited);
 		} else {
 			toast({
 				title: 'Tenés campos sin completar.',
@@ -133,8 +144,8 @@ const ListaArchivos = ({ seleccionado }) => {
 	};
 
 	return (
-		<Stack h='100%'>
-			<Stack overflowY='scroll' h='100%' justify='space-between'>
+		<Stack h='100%' justify='space-between' >
+			<Flex overflowY='scroll' h="85%" flexDir="column" padding={1} alignItems="center">
 				{archivos &&
 					archivos.map((arch) => (
 						<ItemsArchivos
@@ -146,10 +157,10 @@ const ListaArchivos = ({ seleccionado }) => {
 							fecha={arch.fecha}
 						/>
 					))}
-				{isLoading && <Spinner color='brand.primario' />}
-			</Stack>
-			<Stack>
-				<Button color='brand.secundario' onClick={onOpen}>
+				{isLoading && <Spinner color='brand.secundario' />}
+			</Flex>
+			<Stack h="15%">
+				<Button colorScheme="green" onClick={onOpen}>
 					Añadir nuevo
 				</Button>
 			</Stack>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { query, getDocs, collection } from 'firebase/firestore';
 import { firestore } from '../../firebase';
-import { Flex, Heading, Divider, Select, Text, Stack } from '@chakra-ui/react';
+import { Flex, Heading, Divider, Select, Stack } from '@chakra-ui/react';
 import ListaArchivos from './ListaArchivos';
 
 const CargarDocumentos = () => {
@@ -37,10 +37,7 @@ const CargarDocumentos = () => {
 				Gestionar reportes
 			</Heading>
 			<Divider marginBlock={2} />
-			<Stack>
-				<Text margin={0} fontSize='sm' as='b'>
-					Cliente
-				</Text>
+			<Stack h="100%">
 				<Select
 					placeholder='Seleccionar cliente'
 					onChange={(e) => setClienteSeleccionado(e.target.value)}

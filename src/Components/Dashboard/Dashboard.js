@@ -1,19 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {
-	query,
-	where,
-	getDocs,
-	collection,
-} from 'firebase/firestore';
+import { query, where, getDocs, orderBy, collection } from 'firebase/firestore';
 import { firestore } from '../../firebase';
-import {
-	Flex,
-	Heading,
-	Divider,
-	Spinner,
-	useMediaQuery,
-} from '@chakra-ui/react';
+import { Flex, Spinner, useMediaQuery } from '@chakra-ui/react';
 import Archivos from './Archivos';
 import DatosCliente from './DatosCliente';
 
@@ -24,23 +13,22 @@ const Dashboard = () => {
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	useEffect(() => {
-        
 		const getReportes = async () => {
-            setIsLoading(true)
+			setIsLoading(true);
 			const docs = [];
 			const q = query(
 				collection(firestore, 'archivos'),
-				where('idcliente', '==', paramsID.id)
+				where('idcliente', '==', paramsID.id),
+				orderBy('fecha', 'desc')
 			);
 			const querySnapshot = await getDocs(q);
 			querySnapshot.forEach((doc) => {
 				docs.push({ ...doc.data(), id: doc.id });
 			});
 			setReportes(docs);
-            setIsLoading(false)
+			setIsLoading(false);
 		};
 		getReportes();
-        
 	}, [paramsID]);
 
 	return (
@@ -48,7 +36,7 @@ const Dashboard = () => {
 			<Flex width={isMobile ? '90vw' : '70vw'} flexDir={'column'}>
 				<Flex flexDir={'column'} padding={10}>
 					<DatosCliente />
-					<Flex flexDir='column' marginBottom={5} alignItems="center">
+					<Flex flexDir='column' marginBottom={5} alignItems='center'>
 						{reportes &&
 							reportes.map((arch) => (
 								<Archivos
@@ -58,9 +46,10 @@ const Dashboard = () => {
 									titulo={arch.titulo}
 								/>
 							))}
-                            {isLoading && <Spinner color="brand.secundario" size="lg" margin={5} />}
+						{isLoading && (
+							<Spinner color='brand.secundario' size='lg' margin={5} />
+						)}
 					</Flex>
-                    
 				</Flex>
 			</Flex>
 		</Flex>

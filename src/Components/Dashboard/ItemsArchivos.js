@@ -15,6 +15,7 @@ const ItemsArchivos = ({ id, titulo, handleDelete, archivo, fecha }) => {
 			direction='row'
 			align='center'
 			justify='space-between'
+			marginBottom={2}
 		>
 			<Stack direction="row" divider={<StackDivider />}>
 				<Text fontSize='sm' as="b" textOverflow='ellipsis'
