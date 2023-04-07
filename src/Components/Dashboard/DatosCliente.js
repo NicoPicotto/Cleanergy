@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { Flex, Heading, Stack, StackDivider, useMediaQuery } from '@chakra-ui/react';
-import { useAuth } from '../../Context/Context';
 import {
-	query,
-	where,
-	getDocs,
-	collection,
-} from 'firebase/firestore';
+	Flex,
+	Heading,
+	Stack,
+	StackDivider,
+	useMediaQuery,
+	Image,
+} from '@chakra-ui/react';
+import { useAuth } from '../../Context/Context';
+import { query, where, getDocs, collection } from 'firebase/firestore';
 import { firestore } from '../../firebase';
 
 const DatosCliente = () => {
 	const { userUid } = useAuth();
-	
+
 	const [datos, setDatos] = useState(null);
-    const [isMobile] = useMediaQuery('(max-width: 1100px)');
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	useEffect(() => {
 		const getDatos = async () => {
@@ -31,23 +33,31 @@ const DatosCliente = () => {
 		getDatos();
 	}, []);
 
+	console.log(datos);
+
 	return (
 		<Flex
 			flexDir='column'
 			fontFamily={'fonts.open'}
-            padding={5}
+			padding={5}
 			borderRadius={5}
 			shadow='md'
-			bgColor='brand.primario'
+			bgColor='white'
+			borderColor='brand.primario'
+			borderWidth={2}
 		>
 			{datos &&
 				datos.map((d) => (
-					<Stack key={d.id} direction={isMobile ? "column" : "row"} divider={<StackDivider />}>
-						<Heading size='lg' color='white'>
+					<Stack
+						key={d.id}
+						direction={isMobile ? 'column' : 'row'}
+						divider={<StackDivider />} align="center"
+					>
+						<Image src={d.logo} h='75px' />
+						<Heading size='xl' color='brand.primario'>
 							{d.nombre}
-						</Heading>	
+						</Heading>
 					</Stack>
-					
 				))}
 		</Flex>
 	);
