@@ -138,11 +138,19 @@ const Navbar = () => {
 										Proyectos
 									</Button>
 								</Link>
+								{userUid === 'mXgsGCbtP8N3NTq2Ljs0xFLwuAJ3' && (
+									<Link to={'/admin-clg'}>
+										<Button color={'brand.primario'} variant={'ghost'}>
+											Admin Panel
+										</Button>
+									</Link>
+								)}
 								<Link to={user ? `/usuario/${userUid}` : '/login'}>
 									<Button
 										color={'brand.primario'}
 										variant={'ghost'}
 										onClick={onClose}
+										display={userUid === 'mXgsGCbtP8N3NTq2Ljs0xFLwuAJ3' && "none"}
 									>
 										{user ? 'Ver mis reportes' : 'Acceso clientes'}
 									</Button>
@@ -197,14 +205,22 @@ const Navbar = () => {
 								</Link>
 							</MenuList>
 						</Menu>
+
 						<Link to={'/proyectos'}>
 							<Button color={'brand.primario'} variant={'ghost'}>
 								Proyectos
 							</Button>
 						</Link>
+						{userUid === 'mXgsGCbtP8N3NTq2Ljs0xFLwuAJ3' && (
+							<Link to={'/admin-clg'}>
+								<Button color={'brand.primario'} variant={'ghost'}>
+									Admin Panel
+								</Button>
+							</Link>
+						)}
 						<Link to={user ? `/usuario/${userUid}` : '/login'}>
-							<Button color={'brand.primario'} variant={'ghost'}>
-							{user ? 'Ver mis reportes' : 'Acceso clientes'}
+							<Button color={'brand.primario'} variant={'ghost'} display={userUid === 'mXgsGCbtP8N3NTq2Ljs0xFLwuAJ3' && "none"}>
+								{user ? 'Ver mis reportes' : 'Acceso clientes'}
 							</Button>
 						</Link>
 						{user && (

@@ -114,32 +114,37 @@ const CardsProyectos = () => {
 												100m3/día.
 											</Text>
 											<Text fontSize={'sm'} marginBottom={4}>
-												<Text as='b'>Rol de Cleanergy:</Text> desarrollo del
+												<Text as='b'>Rol de Cleanergy:</Text> Desarrollo del
 												proyecto, gestión y supervisión de obra, puesta en
 												marcha, gerenciamiento y operación integral de la planta
 												(control biológico y fisicoquímico, logística de
 												sustratos y mantenimiento).
 											</Text>
 										</Flex>
-										<Flex w="100%" justifyContent="space-evenly" flexWrap="wrap">
+										<Flex
+											w='100%'
+											justifyContent='space-evenly'
+											flexWrap='wrap'
+										>
 											<Button
 												size='sm'
 												colorScheme={'green'}
 												rightIcon={<DownloadIcon />}
-												as="a"
+												as='a'
 												href='/assets/5.1-00 Misión, Visión y Valores.pdf'
-												download="5.1-00 Misión, Visión y Valores.pdf"
-												margin={1}											>
+												download='5.1-00 Misión, Visión y Valores.pdf'
+												margin={1}
+											>
 												Misión, visión y valores
 											</Button>
 											<Button
 												size='sm'
 												colorScheme={'green'}
 												rightIcon={<DownloadIcon />}
-												as="a"
+												as='a'
 												href='/assets/5.2-00 Política ambiental.pdf'
-												download="5.2-00 Política ambiental.pdf"
-												margin={1}	
+												download='5.2-00 Política ambiental.pdf'
+												margin={1}
 											>
 												Política ambiental
 											</Button>
@@ -208,10 +213,180 @@ const CardsProyectos = () => {
 												• <Text as='u'>Potencia instalada:</Text> 400kW.
 											</Text>
 											<Text fontSize={'sm'}>
-												<Text as='b'>Rol de Cleanergy:</Text> reingeniería de
+												<Text as='b'>Rol de Cleanergy:</Text> Reingeniería de
 												planta, reformulación de receta, puesta en marcha,
 												logística de sustratos, control biológico y
 												físicoquímico.
+											</Text>
+										</Flex>
+									</AccordionPanel>
+								</AccordionItem>
+							</Accordion>
+						</Flex>
+					</Box>
+				</Flex>
+				<Flex
+					justifyContent={'space-evenly'}
+					alignItems={'center'}
+					overflowX={'hidden'}
+					marginBottom={5}
+					flexDir={isMobile && 'column'}
+					flexWrap={'wrap'}
+				>
+					<Box
+						width={isMobile ? '90vw' : '30vw'}
+						borderRadius={20}
+						backdropFilter={'auto'}
+						bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+						boxShadow='md'
+						borderColor={colorMode === 'dark' && 'brand.secundario'}
+						borderWidth={colorMode === 'dark' && 1}
+						overflow={'hidden'}
+						marginTop={5}
+						marginBottom={5}
+						transition={'0.3s'}
+						_hover={{ boxShadow: 'lg' }}
+					>
+						<Box overflow={'hidden'}>
+							<Image
+								src='/assets/proyectosResner.webp'
+								alt='Resner'
+								width={'100%'}
+							/>
+						</Box>
+						<Flex
+							padding={2}
+							flexDir={'column'}
+							justifyContent={'space-between'}
+						>
+							<Accordion allowToggle padding={1} borderColor={'transparent'}>
+								<AccordionItem>
+									<AccordionButton>
+										<Flex
+											alignItems={'center'}
+											justifyContent={'space-between'}
+											width={'100%'}
+										>
+											<Heading color={'brand.secundario'} fontSize={'xl'}>
+												Resener S.A.
+											</Heading>
+											<AccordionIcon color={'brand.terciario'} />
+										</Flex>
+									</AccordionButton>
+									<AccordionPanel
+										bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+										pb={4}
+										fontFamily={'fonts.open'}
+									>
+										<Flex flexDir={'column'}>
+											<Text fontSize={'sm'} marginBottom={4}>
+												Proyecto adjudicado en RenovAr 2 en 2017, ubicado en
+												Bahía Blanca, provincia de Buenos Aires. Resener procesa
+												residuos orgánicos agroindustriales, para producir
+												energía eléctrica y digestato (fertilizante orgánico).
+											</Text>
+											<Text fontSize={'sm'}>
+												• <Text as='u'>Habilitación comercial:</Text>{' '}
+												03/07/2021.
+											</Text>
+											<Text fontSize={'sm'}>
+												• <Text as='u'>Potencia contratada:</Text> 0,72 MW.
+											</Text>
+											<Text fontSize={'sm'}>
+												• <Text as='u'>Producción de energía:</Text> 17,3
+												MWh/día.
+											</Text>
+											<Text fontSize={'sm'} marginBottom={4}>
+												• <Text as='u'>Producción de digestato:</Text> 150
+												m3/día.
+											</Text>
+											<Text fontSize={'sm'} marginBottom={4}>
+												<Text as='b'>Rol de Cleanergy:</Text> Puesta en Marcha
+												Biológica y Operación Integral de la planta (control
+												biológico y fisicoquímico, y asistencia en el
+												mantenimiento).
+											</Text>
+										</Flex>
+									</AccordionPanel>
+								</AccordionItem>
+							</Accordion>
+						</Flex>
+					</Box>
+					<Box
+						width={isMobile ? '90vw' : '30vw'}
+						borderRadius={20}
+						backdropFilter={'auto'}
+						bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+						boxShadow='md'
+						borderColor={colorMode === 'dark' && 'brand.secundario'}
+						borderWidth={colorMode === 'dark' && 1}
+						overflow={'hidden'}
+						marginTop={5}
+						marginBottom={5}
+						transition={'0.3s'}
+						_hover={{ boxShadow: 'lg' }}
+					>
+						<Box overflow={'hidden'}>
+							<Image
+								src='/assets/proyectosGV.webp'
+								alt='GV Biogás'
+								width={'100%'}
+							/>
+						</Box>
+						<Flex
+							padding={2}
+							flexDir={'column'}
+							justifyContent={'space-between'}
+						>
+							<Accordion allowToggle padding={1} borderColor={'transparent'}>
+								<AccordionItem>
+									<AccordionButton>
+										<Flex
+											alignItems={'center'}
+											justifyContent={'space-between'}
+											width={'100%'}
+										>
+											<Heading color={'brand.secundario'} fontSize={'xl'}>
+												General Villegas Biogás S.A. – Grupo María Elena
+											</Heading>
+											<AccordionIcon color={'brand.terciario'} />
+										</Flex>
+									</AccordionButton>
+									<AccordionPanel
+										bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+										pb={4}
+										fontFamily={'fonts.open'}
+									>
+										<Flex flexDir={'column'}>
+											<Text fontSize={'sm'} marginBottom={4}>
+												Proyecto adjudicado en RenovAr 2 en 2017, ubicado en
+												General Villegas, provincia de Buenos Aires. GVBio
+												procesa silo de maíz y residuos orgánicos
+												agroindustriales provenientes de las industrias
+												alimenticias y establecimientos pecuarios de la zona,
+												para producir energía eléctrica y digestato
+												(fertilizante orgánico).
+											</Text>
+											<Text fontSize={'sm'}>
+												• <Text as='u'>Habilitación comercial:</Text>{' '}
+												12/10/2021.
+											</Text>
+											<Text fontSize={'sm'}>
+												• <Text as='u'>Potencia contratada:</Text> 1,2 MW.
+											</Text>
+											<Text fontSize={'sm'}>
+												• <Text as='u'>Producción de energía:</Text>{' '}
+												28,8MWh/día.
+											</Text>
+											<Text fontSize={'sm'} marginBottom={4}>
+												• <Text as='u'>Producción de digestato:</Text> 70
+												m3/día.
+											</Text>
+											<Text fontSize={'sm'} marginBottom={4}>
+												<Text as='b'>Rol de Cleanergy:</Text> Operación integral
+												de la planta (control biológico y fisicoquímico,
+												logística de sustratos y asistencia en el
+												mantenimiento).
 											</Text>
 										</Flex>
 									</AccordionPanel>

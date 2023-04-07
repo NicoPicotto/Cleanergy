@@ -14,8 +14,9 @@ import SolarTermico from './views/serviciosSolarTermico';
 import Footer from './Components/Footer/Footer';
 import ScrolToTop from './Components/ScrollToTop/ScrollToTop';
 import ClientDashboard from './views/clientDashboard';
-import AdminDashboard from "./views/adminDashboard"
+import AdminDashboard from './views/adminDashboard';
 import ErrorPage from './views/404';
+import ProtectedRoutes from './ProtectedRoutes/ProtectedRoutes';
 import { ContextProvider } from './Context/Context';
 
 const App = () => {
@@ -34,8 +35,22 @@ const App = () => {
 						<Route path='/solarfotovoltaico' element={<SolarFotovoltaico />} />
 						<Route path='/solartermico' element={<SolarTermico />} />
 						<Route path='/login' element={<Login />} />
-						<Route path='/usuario/:id' element={<ClientDashboard />} />
-						<Route path='/admin-clg' element={<AdminDashboard />} />
+						<Route
+							path='/usuario/:id'
+							element={
+								<ProtectedRoutes>
+									<ClientDashboard />
+								</ProtectedRoutes>
+							}
+						/>
+						<Route
+							path='/admin-clg'
+							element={
+								<ProtectedRoutes>
+									<AdminDashboard />
+								</ProtectedRoutes>
+							}
+						/>
 						<Route path='*' element={<ErrorPage />} />
 					</Routes>
 					<Footer />
