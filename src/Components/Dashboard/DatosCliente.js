@@ -33,8 +33,6 @@ const DatosCliente = () => {
 		getDatos();
 	}, []);
 
-	console.log(datos);
-
 	return (
 		<Flex
 			flexDir='column'
@@ -51,7 +49,8 @@ const DatosCliente = () => {
 					<Stack
 						key={d.id}
 						direction={isMobile ? 'column' : 'row'}
-						divider={<StackDivider />} align="center"
+						divider={<StackDivider />}
+						align='center'
 					>
 						<Image src={d.logo} h='75px' />
 						<Heading size='xl' color='brand.primario'>
