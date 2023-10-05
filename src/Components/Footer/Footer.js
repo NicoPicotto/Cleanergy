@@ -270,7 +270,7 @@ const Footer = () => {
 				bgColor={colorMode === 'dark' ? null : 'brand.terciario'}
 			>
 				<Text fontSize={12} color={'white'}>
-					© {currentYear} Cleanergy - All rights reserved.{' '}
+					© {currentYear} Cleanergy - Todos los derechos reservados.{' '}
 				</Text>
 			</Flex>
 		</>

@@ -1,0 +1,56 @@
+[
+	{
+		"name": "Juan Pablo Macagno",
+		"image": "/assets/teamJP.webp",
+		"position": "Gerente",
+		"description": "Licenciado en Biotecnología (UNR), PhD en Biotecnología (Universidad de Glasgow, Reino Unido). Vasta experiencia en investigación, desarrollo, estructuración y gestión de proyectos de energía renovable, gestión ambiental y de residuos sólidos urbanos e industriales."
+	},
+	{
+		"name": "Julieta Oviedo",
+		"image": "/assets/teamJuli.webp",
+		"position": "Responsable de Operación y Logística",
+		"description": "Licenciada en Ambiente y Energías Renovables (UNVM). Experiencia en diseño y desarrollo de proyectos solares fotovoltaicos de pequeña y mediana escala y en gestión de residuos orgánicos agroindustriales y operación de plantas de biogás."
+	},
+	{
+		"name": "Flavio Lepore",
+		"image": "/assets/teamFlavio.webp",
+		"position": "Responsable de Ingeniería y Mantenimiento",
+		"description": "Ingeniero Mecánico (UNRC) y diplomado en gestión de activos y mantenimiento (UTN). Experiencia en diseño y desarrollo de diferentes proyectos de ingeniería en industrias como la automotriz, medicina y metalmecánica. Experiencia en desarrollo de proyectos, gestión de mantenimiento y operación de plantas de biogás."
+	},
+	{
+		"name": "Martín Romagnoli",
+		"image": "/assets/teamMR.webp",
+		"position": "Responsable de Gestión Ambiental",
+		"description": "Ingeniero Ambiental (UNL). Experiencia en implementación de sistemas de gestión y control documental, y asesoría del cumplimiento legal en materia ambiental."
+	},
+	{
+		"name": "Nicolás Bullo",
+		"image": "/assets/teamBullo.webp",
+		"position": "Responsable de valorización agronómica del digestato",
+		"description": "Estudiante avanzado de Ing. Agronómica en Facultad De Agronomía y Veterinaria (UNRC). Se unió a Cleanergy para realizar su trabajo final de grado y desde entonces se encarga de realizar el asesoramiento técnico agronómico para la revalorización del Digestato."
+	},
+	{
+		"name": "Marlene Martinez",
+		"image": "/assets/teamMarle.webp",
+		"position": "Administrativa",
+		"description": "Estudiante avanzado de Ing. Agronómica en Facultad De Agronomía y Veterinaria (UNRC). Se unió a Cleanergy para realizar su trabajo final de grado y desde entonces se encarga de realizar el asesoramiento técnico agronómico para la revalorización del Digestato."
+	},
+	{
+		"name": "Pablo Gil",
+		"image": "/assets/teamPablo.png",
+		"position": "Logística.",
+		"description": "Realiza tareas logísticas, control documental y opera planta de biogás."
+	},
+	{
+		"name": "Paola Bogino",
+		"image": "/assets/teamPao.png",
+		"position": "Administrativa",
+		"description": "Realiza tareas administrativas."
+	},
+	{
+		"name": "Ana Lucía Romero",
+		"image": "/assets/teamAna.png",
+		"position": "Proceso y Logística",
+		"description": "Licenciada en Ambiente y Energías Renovables (UNVM)."
+	}
+]

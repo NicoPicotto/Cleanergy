@@ -24,7 +24,7 @@ const CargarDocumentos = () => {
 	return (
 		<Flex
 			w='65%'
-			h="100%"
+			h="fit-content"
 			borderColor='lightgray'
 			borderWidth={1}
 			shadow='md'

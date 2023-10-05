@@ -5,7 +5,7 @@ const DarkModeSwitch = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
-		<Tooltip hasArrow label='¡Ahorremos energía!' fontSize={"xs"}>
+		<Tooltip hasArrow label='¡Ahorremos energía!' fontSize={"xs"} overflowX={"hidden"} placement="left">
 			<IconButton
 				aria-label='¡Ahorremos energía!'
 				icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}

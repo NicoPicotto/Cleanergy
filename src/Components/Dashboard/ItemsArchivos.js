@@ -1,18 +1,21 @@
 import React from 'react';
-import { Stack, Text, Button, StackDivider } from '@chakra-ui/react';
+import { Stack, Text, Button, StackDivider, useColorMode } from '@chakra-ui/react';
 
 const ItemsArchivos = ({ id, titulo, handleDelete, archivo, fecha }) => {
 
     const dateFormat = new Date(fecha).toLocaleDateString("es-ES")
+	const { colorMode } = useColorMode();
 
 	return (
 		<Stack
 			shadow='sm'
-			bgColor='#FAF9F6'
+			bgColor={colorMode === 'dark' ? '#1a202c' : '#FAF9F6'}
 			w='100%'
 			padding={2}
 			borderRadius={5}
 			direction='row'
+			borderColor={colorMode === 'dark' && 'brand.secundario'}
+			borderWidth={colorMode === 'dark' && 1}
 			align='center'
 			justify='space-between'
 			marginBottom={2}

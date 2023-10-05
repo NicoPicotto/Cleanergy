@@ -85,8 +85,8 @@ const LoginComponent = () => {
 					justifyContent='center'
 				>
 					<Flex
-						bgColor='white'
-						shadow='md'
+						bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
+						shadow={colorMode === 'dark' ? 'none' : 'md'}
 						flexDir='column'
 						paddingY={5}
 						paddingX={10}
