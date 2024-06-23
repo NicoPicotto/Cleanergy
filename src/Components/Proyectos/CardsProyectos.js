@@ -131,7 +131,7 @@ const CardsProyectos = () => {
 												colorScheme={'green'}
 												rightIcon={<DownloadIcon />}
 												as='a'
-												href='/assets/5.1-00 Misión, Visión y Valores.pdf'
+												href='/assets/5.1-00 Mision, Vision y Valores.pdf'
 												download='5.1-00 Misión, Visión y Valores.pdf'
 												margin={1}
 											>
@@ -142,7 +142,7 @@ const CardsProyectos = () => {
 												colorScheme={'green'}
 												rightIcon={<DownloadIcon />}
 												as='a'
-												href='/assets/5.2-00 Política ambiental.pdf'
+												href='/assets/5.2-00 Politica ambiental.pdf'
 												download='5.2-00 Política ambiental.pdf'
 												margin={1}
 											>
